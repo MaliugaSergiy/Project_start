@@ -1,0 +1,73 @@
+
+
+</div> <!-- <div class="content"> -->
+<footer>
+	<div class="footer" style="background-color: #ef5350">
+		<div class="wr">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aut commodi, delectus excepturi expedita incidunt itaque iure labore modi mollitia nisi provident quam quia ratione sapiente sint soluta totam! Expedita.
+		</div>
+	</div>
+</footer>
+</div> <!-- <div class="page"> -->
+</div>
+
+<!-- The menu -->
+<nav id="menu">
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/about">About us</a>
+			<ul>
+				<li><a href="/about/history">History</a></li>
+				<li><a href="/about/team">The team</a></li>
+				<li><a href="/about/address">Our address</a></li>
+			</ul>
+		</li>
+		<li><a href="/contact">Contact</a></li>
+	</ul>
+</nav>
+
+
+<!-- REMODAL -->
+
+<div class="remodal" data-remodal-id="modal">
+	<button data-remodal-action="close" class="remodal-close"></button>
+	<h1>Remodal</h1>
+	<p>
+		Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+	</p>
+	<br>
+	<button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+	<button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+</div>
+<script>
+	//Form VAlidation 
+
+	$(document).ready(function() {
+
+		$("#callBack").validate({
+			rules: {
+				callBack_name: {
+					required: true
+				},
+				callBack_phone: {
+					required: true,
+					minlenhth: 10,
+					digits: true
+				}
+			},
+			messages: {
+				callBack_name: {
+					required: "Обязательное поле"
+				},
+				callBack_phone: {
+					required: "Обязательное поле"
+				}
+			},
+			focusCleanup: true,
+			focusInvalid: false
+		});
+	});
+
+</script>
+
+
