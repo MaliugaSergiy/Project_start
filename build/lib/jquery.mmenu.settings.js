@@ -15,7 +15,7 @@ jQuery(document).ready(function( $ ) {
 			title: '<div class="menu-logoo">Главное меню</div>'
 		},
 		"offCanvas": {
-			"position": "left",
+			"position": "right",
 			//"zposition": "front"
 		},
 		"navbars": [
