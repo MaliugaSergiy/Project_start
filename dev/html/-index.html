@@ -1,10 +1,47 @@
 <!--#insert file="html/-top.html"-->
 <div class="banner_index">
-    <div class="wr">
+
     <!--    <a href="#modal">Call the modal with data-remodal-id="modal"</a>-->
-       
+    <div class="banner_slider">
+        <div class="banner_slider_item">
+            <div class="wr">
+                <div class="info">
+                    <div class="info_inner">
+                        <div class="descr">Счастливым владельцам<br> по недвижимости</div>
+                        <div class="under_descr">Упрощенное оформление</div>
+                        <a href="" class="read_more"><span>Узнать больше</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner_slider_item">
+            <div class="wr">
+                <div class="info">
+                    <div class="info_inner">
+                        <div class="descr">Счастливым владельцам<br> по недвижимости_2</div>
+                        <div class="under_descr">Упрощенное оформление_2</div>
+                        <a href="" class="read_more"><span>Узнать больше</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 </div>
+<script>
+    $(document).ready(function() {
+        $('.banner_slider').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 300,
+        });
+    });
+
+</script>
+
+
 
 
 

@@ -18,7 +18,8 @@ $(document).ready(function () {
     
     function set_banner_index_height() {
         var height = document.getElementsByClassName("header")[0].offsetHeight;
-        document.getElementsByClassName("banner_index")[0].style.minHeight = 'calc( 100vh - ' +  height + 'px)';
+//        document.getElementsByClassName("banner_index")[0].style.minHeight = 'calc( 100vh - ' +  height + 'px)';
+        $(".banner_index .banner_slider_item").outerHeight('calc( 100vh - ' +  height + 'px)')
     }
     set_banner_index_height();
     $(window).on("resize", set_banner_index_height);
@@ -67,6 +68,9 @@ $(document).ready(function () {
 			$("section.header").removeClass("scrolled");
 		}
 	})
+    
+    
+    $("body").css("opacity", 1);
 
 });
 
