@@ -41,7 +41,7 @@ gulp.task('css', function () {
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({ 
 			cascade: false,
-			browsers: "last 15 versions"			
+			browsers: "last 50 versions"			
 		}))
         .pipe(rename('style.min.css'))
 	    .pipe(csscomb())
