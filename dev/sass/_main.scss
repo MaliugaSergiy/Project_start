@@ -392,7 +392,7 @@ a:active, a:focus {
             width: 100%;
             display: flex;
             padding-bottom: 50px;
-           
+           flex-wrap: wrap;
             .item {
                 flex-grow: 1;
                 border-top: 1px solid $m_grey;
@@ -400,12 +400,14 @@ a:active, a:focus {
                 border-left: 1px solid $m_grey;
 //                border-right: 1px solid transparent;
                 flex-basis: 25%;
+                
                 position: relative;
                 transition: 0.3s;
                 position: relative;
                 z-index: 1;
-                 margin: 50px 0;
+                margin: 50px 0;
                 display: block;
+                
                 &:first-child {
                     transform-origin: 0 center;
                 }
@@ -419,29 +421,37 @@ a:active, a:focus {
                     box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
                     margin-bottom: 15px;
                 }
+                &:hover .item_bottom {
+                    
+                }
+                @media screen and (max-width: 860px) {
+                    flex-basis: calc(50% - 20px);
+                    margin: 0px 10px;
+                    border: 1px solid $m_grey;
+                    margin-bottom: 20px;
+                    &:hover {
+                        transform: scale(1);
+                        margin-bottom: 20px;
+                        padding: 0;
+                        padding-top: 3px;
+                    }
+                }
                 
                 &:last-child {
                     border-right: 1px solid $m_grey;
                 }
                 &:before, &:after {}
                 &_image {
-                    min-height: 345px;
+                    height: 345px;
+                    min-height: 235px;
                     //border-bottom: 1px solid $m_grey;
                     background-position: center center;
                     background-repeat: no-repeat;
                     background-size: cover;
-//                    &:nth-child(1) {
-//                        background-image: url(../img/toi1.jpg);
-//                    }
-//                    &:nth-child(2) {
-//                        background-image: url(../img/toi2.jpg);
-//                    }
-//                    &:nth-child(3) {
-//                        background-image: url(../img/toi3.jpg);
-//                    }
-//                    &:nth-child(4) {
-//                        background-image: url(../img/toi4.jpg);
-//                    }
+                    @media screen and (max-width: 1024px) {
+                       height: 43.5vmin;
+                        
+                    }
                 }
                 &_bottom {
                     text-align: center;
@@ -453,13 +463,17 @@ a:active, a:focus {
                     flex-direction: column;
                     padding: 15px 0 0px;
                     background-color: #fff;
+                    pointer-events: none;
+                    @media screen and (max-width: 860px) {
+                        pointer-events: auto;
+                    }
                     .name {
                         color: $m_grey;
                         
                     }
                     .more {
                         //display: none;
-
+                        pointer-events: auto;
                         overflow: hidden;
                         transition: 0.3s;
                         opacity: 0;
@@ -473,11 +487,13 @@ a:active, a:focus {
                         margin-top: 10px;
                         transform: scale(0);
                         border: 1px solid transparent;
+                        cursor: pointer;
                         &:hover {
                             background-color: #fff;
                             color: $m_red;
                             border: 1px solid $m_red;
                         }
+                        
                         
                     }
                 }
@@ -494,6 +510,9 @@ a:active, a:focus {
                 &:nth-child(4) .item_image {
                     background-image: url(../img/toi4.jpg);
                     background-position:  calc(50% - 70px) center;
+                     @media screen and (max-width: 1024px) {
+                        background-position:  calc(50% - 55px) center; 
+                    }
                 }
                 &:hover .item_bottom .more {
                     display: block;
@@ -502,6 +521,11 @@ a:active, a:focus {
                     padding: 20px;
                     transition: 0.3s;
                     transform: scale(1);
+                    @media screen and (max-width: 860px) {
+                            display: none !important;
+                            padding: 0px !important;
+                             transform: scale(0) !important;
+                        }
                     
                 }
             }
