@@ -8867,6 +8867,22 @@ h2
 
     color: #202021;
 }
+@media screen and (max-width: 420px)
+{
+    h2
+    {
+        font-size: 22px;
+
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 460px)
+{
+    h2
+    {
+        font-size: 20px;
+    }
+}
 
 p.underH2
 {
@@ -9274,7 +9290,7 @@ a:focus
 {
     font-size: 42px;
 }
-@media screen and (max-width: 430px)
+@media screen and (max-width: 500px)
 {
     .banner_index .banner_slider .banner_slider_item .wr .info .info_inner .descr
     {
@@ -9441,6 +9457,14 @@ a:focus
     opacity: 1;
 }
 
+@media screen and (max-width: 420px)
+{
+    .types_of_insurance .wr .underH2
+    {
+        display: none;
+    }
+}
+
 .types_of_insurance .wr .cont_in
 {
     display: -webkit-box;
@@ -9516,7 +9540,7 @@ a:focus
     -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, .75);
             box-shadow: 0 0 25px 0 rgba(0, 0, 0, .75);
 }
-@media screen and (max-width: 860px)
+@media screen and (max-width: 900px)
 {
     .types_of_insurance .wr .cont_in .item
     {
@@ -9533,8 +9557,7 @@ a:focus
     .types_of_insurance .wr .cont_in .item:hover
     {
         margin-bottom: 20px;
-        padding: 0;
-        padding-top: 3px; 
+        padding: 0; 
 
         -webkit-transform: scale(1);
            -moz-transform: scale(1);
@@ -9562,7 +9585,17 @@ a:focus
 {
     .types_of_insurance .wr .cont_in .item_image
     {
-        height: 43.5vmin;
+        height: 33vmax;
+
+        background-position: center !important;
+    }
+}
+@media screen and (max-width: 510px)
+{
+    .types_of_insurance .wr .cont_in .item_image
+    {
+        height: 25vmax;
+        min-height: 140px;
     }
 }
 .types_of_insurance .wr .cont_in .item_bottom
@@ -9601,16 +9634,26 @@ a:focus
        -moz-box-direction: normal;
         -ms-flex-direction: column;
 }
-@media screen and (max-width: 860px)
+@media screen and (max-width: 900px)
 {
     .types_of_insurance .wr .cont_in .item_bottom
     {
+        min-height: 45px; 
+        padding: 0;
+
         pointer-events: auto;
     }
 }
 .types_of_insurance .wr .cont_in .item_bottom .name
 {
     color: #999;
+}
+@media screen and (max-width: 420px)
+{
+    .types_of_insurance .wr .cont_in .item_bottom .name
+    {
+        font-size: 16px;
+    }
 }
 .types_of_insurance .wr .cont_in .item_bottom .more
 {
@@ -9640,6 +9683,21 @@ a:focus
     color: #fff;
     border: 1px solid transparent;
     background-color: #f00;
+}
+@media screen and (max-width: 900px)
+{
+    .types_of_insurance .wr .cont_in .item_bottom .more
+    {
+        display: none !important;
+
+        padding: 0 !important;
+
+        -webkit-transform: scale(0) !important;
+           -moz-transform: scale(0) !important;
+            -ms-transform: scale(0) !important;
+             -o-transform: scale(0) !important;
+                transform: scale(0) !important;
+    }
 }
 .types_of_insurance .wr .cont_in .item_bottom .more:hover
 {
@@ -9696,7 +9754,7 @@ a:focus
 
     opacity: 1;
 }
-@media screen and (max-width: 860px)
+@media screen and (max-width: 900px)
 {
     .types_of_insurance .wr .cont_in .item:hover .item_bottom .more
     {
