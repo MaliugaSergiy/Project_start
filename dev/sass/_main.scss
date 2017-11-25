@@ -20,6 +20,7 @@ h2 {
     }
 
 }
+
 h3 {
     font-size: 18px;
     text-align: center;
@@ -939,6 +940,26 @@ footer {
     .nav-tabs > li.active > a:hover {
         border: 1px solid transparent;
     }
+    .nav-tabs > li.active {
+        position: relative;
+        &:before {
+            position: absolute;
+            content: "";
+            display: block;
+            right: 0;
+            left: 0;
+            bottom: 20px;
+            background-color: $m_red;
+            height: 3px;
+            z-index: 1;
+            @media screen and (max-width: 995px) {
+                bottom: 0px;
+            }
+        }
+    }
+    .nav-tabs > li.active {
+        position: relative;
+    }
     .wr-tabs {
         max-width: 1450px;
         padding: 0;
@@ -958,7 +979,7 @@ footer {
             display: flex;
             justify-content: center;
             align-items: center;
-            &.active  a {
+            &.active a {
                 color: $m_red;
             }
             &:not(.active):hover a {
@@ -1007,7 +1028,7 @@ footer {
             max-height: calc(100vh - 71px);
             height: 75vmin;
             min-height: 230px;
-            
+
             background-position: left center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -1030,8 +1051,9 @@ footer {
                     @media screen and (max-width: 840px) {
                         //right: 0;
                     }
-
-
+                    @media screen and (max-width: 400px) {
+                        right: 40%;
+                    }
                     .info_inner {
                         width: 100%;
                         position: absolute;
@@ -1040,22 +1062,41 @@ footer {
                         text-align: left;
                         color: #fff;
                         padding-left: 10px;
-                        
+
+
                         .descr {
                             font-size: 42px;
                             font-weight: 300;
+                            margin-bottom: 15px;
+                            @media screen and (max-width: 790px) {
+                                font-size: 32px;
+                            }
+                            @media screen and (max-width: 610px) {
+                                font-size: 24px;
+                            }
+                            @media screen and (max-width: 460px) {
+                                font-size: 20px;
+                            }
+
                             span {
                                 font-weight: bold;
                                 font-weight: 400;
                             }
-                            
+
                         }
                         .under_descr {
                             font-size: 24px;
                             @media screen and (max-width: 500px) {
                                 display: none;
                             }
-                            
+                            @media screen and (max-width: 790px) {
+                                font-size: 20px;
+                            }
+                            @media screen and (max-width: 610px) {
+                                display: none;
+                            }
+
+
 
                         }
                         .read_more {
@@ -1070,6 +1111,14 @@ footer {
                             position: relative;
                             overflow: hidden;
                             transition: 0.5s;
+                            text-align: center;
+                            @media screen and (max-width: 610px) {
+                                padding: 10px 15px;
+                                margin-right: 10px;
+                            }
+                            @media screen and (max-width: 460px) {
+                                margin-top: 0px;
+                            }
                             span {
                                 position: relative;
                                 z-index: 2;
@@ -1123,8 +1172,8 @@ footer {
                 justify-content: center;
                 align-items: center;
                 @media screen and (max-width: 690px) {
-                            flex-wrap: wrap;
-                        }
+                    flex-wrap: wrap;
+                }
                 .numbers_item {
                     flex-grow: 1;
                     font-size: 18px;
@@ -1133,9 +1182,9 @@ footer {
                     align-items: center;
                     padding: 5px;
                     @media screen and (max-width: 415px) {
-                            flex-basis: 100%;
+                        flex-basis: 100%;
                         margin-top: 15px;
-                        }
+                    }
                     .num {
                         font-size: 72px;
                         color: $m_red;
@@ -1149,13 +1198,13 @@ footer {
                                 font-size: 14px;
                             }
                         }
-                        
+
                     }
                     .info {
-                            @media screen and (max-width: 690px) {
-                                font-size: 14px;
-                            }
+                        @media screen and (max-width: 690px) {
+                            font-size: 14px;
                         }
+                    }
                 }
             }
         }
@@ -1167,19 +1216,18 @@ footer {
                 align-items: center;
                 position: relative;
                 padding: 0;
-                @media screen and (max-width: 950px) {
-                    
-                }
+                @media screen and (max-width: 950px) {}
 
-                .info { 
+                .info {
                     padding: 30px 30px 50px 30px;
                     width: 50%;
-                    background-color:  transparentize($m_grey, 0.1);
+                    background-color: transparentize($m_grey, 0.1);
                     border: 1px solid $m_red;
                     position: relative;
                     z-index: 1;
                     transition: 0.3s;
-                    box-shadow: 2px 0px 5px 0px rgba(0,0,0,0.5);
+                    box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.5);
+
                     @media screen and (max-width: 1100px) {
                         width: 60%;
                     }
@@ -1200,22 +1248,18 @@ footer {
                     }
                 }
                 .img {
-//                    position: absolute;
-                    
-                    width: 50%;
-//                    max-width: 600px;
-
-                    height: 280px;
-//                    height: 100%;
+                    //                    position: absolute;
+                    width: 50%; //                    max-width: 600px;
+                    height: 280px; //                    height: 100%;
                     background-image: url(../img/baby.jpg);
-                    background-position: center ;
+                    background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
                     z-index: 0;
                     transition: 0.3s;
                     @media screen and (max-width: 1100px) {
                         width: 40%;
-                        background-position: -60px center ;
+                        background-position: -60px center;
                     }
                     @media screen and (max-width: 980px) {
                         width: 30%;
@@ -1223,16 +1267,19 @@ footer {
                     @media screen and (max-width: 950px) {
                         width: 100%;
                         position: absolute;
-                        top: -15px;bottom: -15px;right: 0;left: 0;
-                         background-position:  center ;
+                        top: -15px;
+                        bottom: -15px;
+                        right: 0;
+                        left: 0;
+                        background-position: center;
                         background-size: cover;
                         height: auto;
                     }
-                    @media screen and (max-width: 570px)  {
-                        background-position: -100px center ;
+                    @media screen and (max-width: 570px) {
+                        background-position: -100px center;
                     }
-                    @media screen and (max-width: 400px)  {
-                        background-position: -150px center ;
+                    @media screen and (max-width: 400px) {
+                        background-position: -150px center;
                     }
                 }
             }
@@ -1259,9 +1306,9 @@ footer {
             .wr {
                 display: flex;
                 padding: 0;
-                @media screen and (max-width: 830px)  {
-                        flex-wrap: wrap;
-                    }
+                @media screen and (max-width: 830px) {
+                    flex-wrap: wrap;
+                }
                 .item {
                     width: 50%;
                     background-color: #fff;
@@ -1269,43 +1316,124 @@ footer {
                     background-image: url(../img/calc_1.jpg);
                     background-repeat: no-repeat;
                     background-position: 30px bottom;
-                    @media screen and (max-width: 830px)  {
+                    @media screen and (max-width: 830px) {
                         width: 100%;
+                    }
+                    @media screen and (max-width: 415px) {
+                        background-position: 5px bottom;
                     }
                     .wrap {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        margin-left: 200px;
+                        margin-left: 125px;
                         padding: 10px;
-                       h2 {
-                         margin: 0;
-                           padding-top: 60px;
-                    }
-                    .btn_insu {
-                        margin-top: 40px;
-                        margin-bottom: 40px;
-                    }
-                    
+                        @media screen and (max-width: 500px) {
+                            margin-left: 175px;
+                            text-align: left;
+                            align-items: flex-start;
+                        }
+                        @media screen and (max-width: 415px) {
+                            margin-left: 150px;
+                        }
+
+                        h2 {
+                            margin: 0;
+                            padding-top: 60px;
+                            font-size: 24px;
+                            @media screen and (max-width: 500px) {
+                                text-align: left;
+                            }
+                        }
+                        .btn_insu {
+                            margin-top: 40px;
+                            margin-bottom: 40px;
+                            @media screen and (max-width: 415px) {
+                                padding: 5px 30px;
+                            }
+                        }
+
                     }
                     &:first-child {
                         border-right: 0 solid transparent;
-                        @media screen and (max-width: 830px)  {
+                        @media screen and (max-width: 830px) {
                             border-right: 1px solid $m_red;
                             border-bottom: 0 solid transparent;
                         }
-                    } 
-                    &:last-child {
-                       background-image: url(../img/calc_2.png);
-                        background-position: calc(100% - 20px) center;
                     }
-                    &:last-child .wrap{
+                    &:last-child {
+                        background-image: url(../img/calc_2.png);
+                        background-position: calc(100% - 20px) center;
+                        @media screen and (max-width: 415px) {
+                            background-position: calc(100% + 10px) center;
+                        }
+
+                    }
+                    &:last-child .wrap {
                         margin-left: 0;
                         margin-right: 200px;
+                        @media screen and (max-width: 500px) {
+                            align-items: flex-end;
+                        }
+                        @media screen and (max-width: 415px) {
+                            margin-right: 160px;
+                        }
+                        h2 {
+                            @media screen and (max-width: 500px) {
+                                text-align: right;
+                            }
+                        }
                     }
-                    
+
                 }
             }
-        } 
+        }
     }
 }
+
+
+.product_container {
+    .nav-tabs-top { // ul
+        margin-top: 25px;
+        border: none;
+        li {
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a {
+                 border: none;
+                margin: 0;
+                padding: 0;
+                .image {
+                    display: block;
+                    width: 190px;
+                    height: 170px;
+                    background-image: url(../img/product_sl_1.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    //border: 1px solid $m_grey;
+                }
+                .name {
+                    text-align: center;
+                    display: block;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
