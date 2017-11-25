@@ -142,87 +142,106 @@
 <div class="product_container">
 
     <nav>
-        <ul class="nav nav-tabs nav-tabs-top">
-            <li class="active"><a data-toggle="tab" href="#tab_live">
-            <span class="image"></span>
-              <span class="name">Жизнь</span>
+        <ul class=" nav-slider">
+            <li class=""><a href="#">
+                <span class="image" style="background-image: url(../img/product_sl_1.jpg);"></span>
+                <span class="name">Жизнь</span>
             </a></li>
-            <li><a data-toggle="tab" href="#tab_childCapital">
-                <span class="image"></span>
+            <li><a href="#">
+                <span class="image" style="background-image: url(../img/product_sl_2.jpg);"></span>
                 <span class="name">Детский капитал</span>
             </a></li>
-            <li><a data-toggle="tab" href="#tab_lediLife">
-                <span class="image"></span>
-                <span class="name">Леди Лайф</span>
+            <li><a href="#">
+                <span class="image" style="background-image: url(../img/product_sl_3.jpg);"></span>
+                <div class="name">Леди Лайф</div>
             </a></li>
-            <li><a data-toggle="tab" href="#tab_pr11">
-                <span class="image"></span>
+            <li><a href="#">
+                <span class="image" style="background-image: url(../img/product_sl_4.jpg);"></span>
                 <span class="name">Программа «11»</span>
             </a></li>
-            <li><a data-toggle="tab" href="#tab_investLife">
-                <span class="image"></span>
+            <li><a href="#">
+                <span class="image" style="background-image: url(../img/product_sl_5.jpg);"></span>
                 <span class="name">Инвест Лайф</span>
             </a></li>
-            <li><a data-toggle="tab" href="#tab_premiumLife">
-                <span class="image"></span>
+            <li><a href="#">
+                <span class="image" style="background-image: url(../img/product_sl_6.jpg);"></span>
                 <span class="name">Премиум-Лайф</span>
             </a></li>
-            <li><a data-toggle="tab" href="#tab_forteLife">
-                <span class="image"></span>
+            <li><a href="#">
+                <span class="image" style="background-image: url(../img/product_sl_7.jpg);"></span>
                 <span class="name">Форте-Лайф</span>
             </a></li>
-            <li><a data-toggle="tab" href="#tab_pension">
-                <span class="image"></span>
+            <li><a href="#">
+                <span class="image" style="background-image: url(../img/product_sl_8.jpg);"></span>
                 <span class="name">Пенсия</span>
             </a></li>
-            <li><a data-toggle="tab" href="#tab_pensionCapital">
-                <span class="image"></span>
+            <li><a href="#">
+                <span class="image" style="background-image: url(../img/product_sl_9.jpg);"></span>
                 <span class="name">Пенсионный капитал</span>
             </a></li>
         </ul>
     </nav>
     <div class="tab-content">
-    
-        <div id="tab_live" class="tab-pane fade in active">
+
+        <div id="tab_live" class="">
             1_Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores magni quo nostrum, fuga voluptatum, vitae facilis nam iusto, ipsam modi at expedita! Perferendis, consectetur, sit? Ut esse accusantium, nisi quidem.
         </div>
-        <div id="tab_childCapital" class="tab-pane fade">
-            2_Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores magni quo nostrum, fuga voluptatum, vitae facilis nam iusto, ipsam modi at expedita! Perferendis, consectetur, sit? Ut esse accusantium, nisi quidem.
-        </div>
-        <div id="tab_lediLife" class="tab-pane fade">
-            3_Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores magni quo nostrum, fuga voluptatum, vitae facilis nam iusto, ipsam modi at expedita! Perferendis, consectetur, sit? Ut esse accusantium, nisi quidem.
-        </div>
-        <div id="tab_pr11" class="tab-pane fade">
-            4_Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores magni quo nostrum, fuga voluptatum, vitae facilis nam iusto, ipsam modi at expedita! Perferendis, consectetur, sit? Ut esse accusantium, nisi quidem.
-        </div>
-        <div id="tab_investLife" class="tab-pane fade">
-            5_Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores magni quo nostrum, fuga voluptatum, vitae facilis nam iusto, ipsam modi at expedita! Perferendis, consectetur, sit? Ut esse accusantium, nisi quidem.
-        </div>
-        <div id="tab_premiumLife" class="tab-pane fade">
-            6_Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores magni quo nostrum, fuga voluptatum, vitae facilis nam iusto, ipsam modi at expedita! Perferendis, consectetur, sit? Ut esse accusantium, nisi quidem.
-        </div>
-        <div id="tab_forteLife" class="tab-pane fade">
-            7_orem ipsum dolor sit amet, consectetur adipisicing elit. Maiores magni quo nostrum, fuga voluptatum, vitae facilis nam iusto, ipsam modi at expedita! Perferendis, consectetur, sit? Ut esse accusantium, nisi quidem.
-        </div>
-        <div id="tab_pension" class="tab-pane fade">
-            8_Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores magni quo nostrum, fuga voluptatum, vitae facilis nam iusto, ipsam modi at expedita! Perferendis, consectetur, sit? Ut esse accusantium, nisi quidem.
-        </div>
-        <div id="tab_pensionCapital" class="tab-pane fade">
-            9_Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores magni quo nostrum, fuga voluptatum, vitae facilis nam iusto, ipsam modi at expedita! Perferendis, consectetur, sit? Ut esse accusantium, nisi quidem.
-        </div>
-    
     </div>
 
 
 </div>
 <script>
     $(document).ready(function() {
-        $('.nav-tabs-top').slick({
+        $('.nav-slider').slick({
             dots: false,
             infinite: true,
             slidesToShow: 9,
             slidesToScroll: 1,
             speed: 300,
+            responsive: [
+                {
+                    breakpoint: 1750,
+                    settings: {
+                        slidesToShow: 8,
+                    }
+                },
+                {
+                    breakpoint: 1550,
+                    settings: {
+                        slidesToShow: 7,
+                    }
+                },
+                {
+                    breakpoint: 1350,
+                    settings: {
+                        slidesToShow: 6,
+                    }
+                },
+                {
+                    breakpoint: 1150,
+                    settings: {
+                        slidesToShow: 5,
+                    }
+                },
+                {
+                    breakpoint: 960,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 780,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+            ]
 
         });
     });
