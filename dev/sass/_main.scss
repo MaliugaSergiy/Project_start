@@ -20,6 +20,10 @@ h2 {
     }
 
 }
+h3 {
+    font-size: 18px;
+    text-align: center;
+}
 
 p.underH2 {
     text-align: center;
@@ -923,6 +927,242 @@ footer {
                     background-image: url(../img/icons/f.png);
                 }
 
+            }
+        }
+    }
+}
+
+
+.products_container {
+    .nav-tabs > li.active > a,
+    .nav-tabs > li.active > a:focus,
+    .nav-tabs > li.active > a:hover {
+        border: 1px solid transparent;
+    }
+    .wr-tabs {
+        max-width: 1450px;
+        padding: 0;
+    }
+    .nav-tabs-top {
+        display: flex;
+        justify-content: center;
+        border-color: transparent;
+        @media screen and (max-width: 995px) {
+            flex-wrap: wrap;
+            border: 1px solid $m_grey;
+        }
+        @media screen and (max-width: 520px) {
+            display: none;
+        }
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &.active  a {
+                color: $m_red;
+            }
+            &:not(.active):hover a {
+                background-color: $m_red;
+                color: #fff;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px 1vw;
+                font-size: 18px;
+                margin-right: 0;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                @media screen and (max-width: 1270px) {
+                    font-size: 17px;
+                }
+                @media screen and (max-width: 1270px) {
+                    font-size: 16px;
+                }
+                @media screen and (max-width: 1130px) {
+                    font-size: 15px;
+                }
+                @media screen and (max-width: 1060px) {
+                    font-size: 14px;
+                }
+                @media screen and (max-width: 995px) {
+                    font-size: 16px;
+                    padding: 5px 1vw;
+                }
+            }
+            @media screen and (max-width: 995px) {
+                flex-basis: 20%;
+                border: 1px solid $m_grey;
+            }
+        }
+
+    }
+
+
+    .tab-content {
+        .tab_banner {
+            width: 100%;
+            max-height: calc(100vh - 71px);
+            height: 75vmin;
+            min-height: 230px;
+            
+            background-position: left center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            @media screen and (max-width: 1140px) {
+                //background-position: center;
+            }
+            .wr {
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+                .info {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 50%;
+                    background-color: rgba(0, 0, 0, 0.31);
+                    @media screen and (max-width: 840px) {
+                        //right: 0;
+                    }
+
+
+                    .info_inner {
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        text-align: left;
+                        color: #fff;
+                        padding-left: 10px;
+                        
+                        .descr {
+                            font-size: 42px;
+                            font-weight: 300;
+                            span {
+                                font-weight: bold;
+                                font-weight: 400;
+                            }
+                            
+                        }
+                        .under_descr {
+                            font-size: 24px;
+                            @media screen and (max-width: 500px) {
+                                display: none;
+                            }
+                            
+
+                        }
+                        .read_more {
+                            pointer-events: auto;
+                            font-size: 18px;
+                            color: #fff;
+                            border: 1px solid #fff;
+                            border-radius: 3px;
+                            padding: 10px 30px;
+                            display: inline-block;
+                            margin-top: 20px;
+                            position: relative;
+                            overflow: hidden;
+                            transition: 0.5s;
+                            span {
+                                position: relative;
+                                z-index: 2;
+                            }
+                            &:after {
+                                content: "";
+                                display: block;
+                                background-color: transparentize($m_red, 0.5);
+                                left: 10px;
+                                top: 10px;
+                                bottom: 10px;
+                                right: 10px;
+                                position: absolute;
+                                z-index: 1;
+                                border-radius: 50%;
+                                opacity: 0;
+                                transition: 0.5s;
+                            }
+                            &:hover:after {
+                                opacity: 1;
+                                border-radius: 0;
+                                left: 0;
+                                top: 0;
+                                bottom: 0;
+                                right: 0;
+                            }
+
+                            &:hover {
+                                border: 1px solid transparent;
+                            }
+
+                        }
+                    }
+
+                }
+                &:after {
+                    content: "";
+                    display: block;
+                    top: 0;
+                    bottom: 0;
+                    right: 100%;
+                    width: 1500px;
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, 0.31);
+                }
+            }
+        }
+        .product_item_numbers {
+            .numbers_container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .numbers_item {
+                    flex-grow: 1;
+                    font-size: 18px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .num {
+                        font-size: 75px;
+                        color: $m_red;
+                        span {
+                            font-size: 18px;
+                            color: $m_black;
+                        }
+                        .info {
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .tab_features {
+            .wr {
+                margin-top: 50px;
+                display: flex;
+                align-items: center;
+                .info { 
+                    padding: 30px 30px 50px 30px;
+                    width: 50%;
+                    background-color: $m_grey;
+                    border: 1px solid $m_red;
+                    h2 {
+                        margin-top: 0;
+                        padding-top: 0;
+                    }
+                    p {
+                        
+                    }
+                }
+                .img {
+                    width: 50%;
+                }
             }
         }
     }
