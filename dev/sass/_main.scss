@@ -575,7 +575,7 @@ a:focus {
 }
 
 .finan_stab {
-    @media screen and (max-width: 420px)  {
+    @media screen and (max-width: 420px) {
         display: none;
     }
     .wr {
@@ -596,8 +596,8 @@ a:focus {
         justify-content: space-between;
         @media screen and (max-width: 965px) {
             flex-wrap: wrap;
-           
-            
+
+
         }
         .flex_item {
             padding: 0 5px;
@@ -610,7 +610,7 @@ a:focus {
             @media screen and (max-width: 965px) {
                 flex-basis: 33%;
                 flex-grow: 1 !important;
-                 align-self: center!important;
+                align-self: center!important;
                 justify-content: center !important;
             }
             .image {
@@ -627,13 +627,13 @@ a:focus {
                 font-size: 20px;
                 font-weight: bold;
                 color: $m_black;
-                
+
             }
             .under_name {
                 font-size: 18px;
                 color: $m_grey;
                 font-weight: bold;
-                
+
             }
             &:first-child {
                 flex-grow: 2;
@@ -647,7 +647,7 @@ a:focus {
                     span {
                         padding: 0 20px;
                     }
-                    
+
                 }
                 .under_name {
                     font-size: 30px;
@@ -708,10 +708,36 @@ a:focus {
         }
     }
 }
+
 .index_news {
-    padding: 0 1% 50px;    
+    padding: 0 1% 50px;
     .slider_container {
         padding-top: 20px;
+        position: relative;
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 30%;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+            transition: 0.5s;
+        }
+        &::before {
+            left: 0;
+            background-image: linear-gradient(to right, #fff, transparent);
+        }
+        &:after {
+            background-image: linear-gradient(to left, #fff, transparent);
+            right: 0;
+        }
+        &:hover:before,
+        &:hover:after {
+            width: 15%;
+        }
+
         .item {
             margin: 0 15px;
             .name {
@@ -725,7 +751,7 @@ a:focus {
                 padding-right: 15px;
                 color: $m_grey;
                 transition: 0.5s;
-                
+
             }
             .date {
                 color: $m_black;
@@ -748,23 +774,24 @@ a:focus {
                     border: 1px solid $m_red;
                 }
             }
-            &:hover .more_info{
+            &:hover .more_info {
                 opacity: 1;
             }
-            &:hover .name{
+            &:hover .name {
                 color: $m_red;
             }
-            &:hover .descr{
+            &:hover .descr {
                 color: $m_black;
             }
         }
     }
-        .slick-dotted.slick-slider {
+    .slick-dotted.slick-slider {
         margin-bottom: 0;
     }
     .slick-dots {
         bottom: -40px;
-    
+
+
     }
     .slick-dots li {
         margin: 0 12px;
@@ -806,13 +833,97 @@ a:focus {
     .slick-dots li button:before {
         opacity: 1;
     }
+    .slick-prev,
+    .slick-next {
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        z-index: 2;
+        &:before {
+            content: "";
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            border-left: 2px solid transparentize($m_red, 0.7);
+            border-bottom: 2px solid transparentize($m_red, 0.7);
+            transform: translateX(30%) rotate(45deg);
+            transition: 0.5s;
+        }
+        &:hover:before {
+            border-left: 2px solid $m_red;
+            border-bottom: 2px solid $m_red;
+        }
+    }
+    .slick-next {
+        &:before {
+            border-left: 2px solid transparent;
+            border-bottom: 2px solid transparentize($m_red, 0.7);
+            border-right: 2px solid transparentize($m_red, 0.7);
+            transform: translateX(-30%) rotate(-45deg);
+        }
+        &:hover:before {
+            border-left: 2px solid transparent;
+            border-bottom: 2px solid $m_red;
+            border-right: 2px solid $m_red;
+        }
+    }
 }
 
+footer {
+    border-top: 1px solid $m_grey;
 
+    .wr {
+        display: flex;
+        justify-content: space-between;
+        color: $m_grey;
+        padding: 12px 10px;
+        font-size: 14px;
+        align-items: center;
+        @media screen and (max-width: 750px) {
+            flex-wrap: wrap-reverse;
+            text-align: center;
+            padding: 14px 10px;
+        }
+        .item {
+            @media screen and (max-width: 750px) {
+                flex-basis: 100%;
+            }
+        }
+        .soc_links {
+            display: flex;
+            margin-left: 20px;
+            @media screen and (max-width: 750px) {
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+            li {
+                a {
+                    width: 30px;
+                    height: 30px;
+                    display: block;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: 20px;
+                    @media screen and (max-width: 750px) {
+                        width: 35px;
+                        height: 35px;
+                    }
 
+                }
+                &:nth-child(1) a {
+                    background-image: url(../img/icons/ins.png);
+                }
+                &:nth-child(2) a {
+                    background-image: url(../img/icons/you.png);
+                }
+                &:nth-child(3) a {
+                    background-image: url(../img/icons/f.png);
+                }
 
-
-
-
-
-
+            }
+        }
+    }
+}

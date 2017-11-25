@@ -227,6 +227,9 @@ input:focus:-moz-placeholder { /* Firefox 18- */
         flex-grow: 1;
     }
 }
+.slick-dots li button:before {
+    content: "";
+}
 
 @import "_main.scss";
 
