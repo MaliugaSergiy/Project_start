@@ -1122,48 +1122,190 @@ footer {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                @media screen and (max-width: 690px) {
+                            flex-wrap: wrap;
+                        }
                 .numbers_item {
                     flex-grow: 1;
                     font-size: 18px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    padding: 5px;
+                    @media screen and (max-width: 415px) {
+                            flex-basis: 100%;
+                        margin-top: 15px;
+                        }
                     .num {
-                        font-size: 75px;
+                        font-size: 72px;
                         color: $m_red;
+                        @media screen and (max-width: 690px) {
+                            font-size: 30px;
+                        }
                         span {
                             font-size: 18px;
                             color: $m_black;
+                            @media screen and (max-width: 690px) {
+                                font-size: 14px;
+                            }
                         }
-                        .info {
-                            
-                        }
+                        
                     }
+                    .info {
+                            @media screen and (max-width: 690px) {
+                                font-size: 14px;
+                            }
+                        }
                 }
             }
         }
         .tab_features {
             .wr {
                 margin-top: 50px;
+                margin-bottom: 30px;
                 display: flex;
                 align-items: center;
+                position: relative;
+                padding: 0;
+                @media screen and (max-width: 950px) {
+                    
+                }
+
                 .info { 
                     padding: 30px 30px 50px 30px;
                     width: 50%;
-                    background-color: $m_grey;
+                    background-color:  transparentize($m_grey, 0.1);
                     border: 1px solid $m_red;
+                    position: relative;
+                    z-index: 1;
+                    transition: 0.3s;
+                    box-shadow: 2px 0px 5px 0px rgba(0,0,0,0.5);
+                    @media screen and (max-width: 1100px) {
+                        width: 60%;
+                    }
+                    @media screen and (max-width: 980px) {
+                        width: 70%;
+                    }
+                    @media screen and (max-width: 950px) {
+                        width: 100%;
+                    }
                     h2 {
                         margin-top: 0;
                         padding-top: 0;
+                        color: $m_red;
+                        margin-bottom: 15px;
                     }
                     p {
-                        
+                        color: #fff;
                     }
                 }
                 .img {
+//                    position: absolute;
+                    
                     width: 50%;
+//                    max-width: 600px;
+
+                    height: 280px;
+//                    height: 100%;
+                    background-image: url(../img/baby.jpg);
+                    background-position: center ;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    z-index: 0;
+                    transition: 0.3s;
+                    @media screen and (max-width: 1100px) {
+                        width: 40%;
+                        background-position: -60px center ;
+                    }
+                    @media screen and (max-width: 980px) {
+                        width: 30%;
+                    }
+                    @media screen and (max-width: 950px) {
+                        width: 100%;
+                        position: absolute;
+                        top: -15px;bottom: -15px;right: 0;left: 0;
+                         background-position:  center ;
+                        background-size: cover;
+                        height: auto;
+                    }
+                    @media screen and (max-width: 570px)  {
+                        background-position: -100px center ;
+                    }
+                    @media screen and (max-width: 400px)  {
+                        background-position: -150px center ;
+                    }
                 }
             }
         }
+        .tab_conditions {
+            .wr {
+                h2 {
+                    color: $m_Dgrey;
+                }
+                p {
+                    color: $m_grey;
+                    padding-top: 20px;
+                    padding-bottom: 0;
+                    span {
+                        color: $m_red;
+                    }
+                }
+            }
+        }
+        .calculate {
+            background-color: $m_red;
+            margin-bottom: 70px;
+            margin-top: 50px;
+            .wr {
+                display: flex;
+                padding: 0;
+                @media screen and (max-width: 830px)  {
+                        flex-wrap: wrap;
+                    }
+                .item {
+                    width: 50%;
+                    background-color: #fff;
+                    border: 1px solid $m_red;
+                    background-image: url(../img/calc_1.jpg);
+                    background-repeat: no-repeat;
+                    background-position: 30px bottom;
+                    @media screen and (max-width: 830px)  {
+                        width: 100%;
+                    }
+                    .wrap {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-left: 200px;
+                        padding: 10px;
+                       h2 {
+                         margin: 0;
+                           padding-top: 60px;
+                    }
+                    .btn_insu {
+                        margin-top: 40px;
+                        margin-bottom: 40px;
+                    }
+                    
+                    }
+                    &:first-child {
+                        border-right: 0 solid transparent;
+                        @media screen and (max-width: 830px)  {
+                            border-right: 1px solid $m_red;
+                            border-bottom: 0 solid transparent;
+                        }
+                    } 
+                    &:last-child {
+                       background-image: url(../img/calc_2.png);
+                        background-position: calc(100% - 20px) center;
+                    }
+                    &:last-child .wrap{
+                        margin-left: 0;
+                        margin-right: 200px;
+                    }
+                    
+                }
+            }
+        } 
     }
 }

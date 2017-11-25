@@ -231,7 +231,25 @@ input:focus:-moz-placeholder { /* Firefox 18- */
     content: "";
 }
 
-
+.btn_insu {
+    color: $m_Dgrey;
+    border: 1px solid $m_red;
+    display: inline-block;
+    padding: 5px 45px;
+    border-radius: 4px;
+    &:hover {
+        background-color: $m_red;
+        color: white;
+    }
+}
+.btn_insu_rew {
+    color: white;
+    background-color: $m_red;
+    &:hover {
+        background-color: #fff;
+        color: $m_Dgrey;
+    }
+}
 
 @import "_main.scss";
 

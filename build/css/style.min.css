@@ -8855,6 +8855,34 @@ input:focus:-moz-placeholder
     content: '';
 }
 
+.btn_insu
+{
+    display: inline-block;
+
+    padding: 5px 45px;
+
+    color: #202021;
+    border: 1px solid #f00;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+}
+.btn_insu:hover
+{
+    color: white; 
+    background-color: #f00;
+}
+
+.btn_insu_rew
+{
+    color: white;
+    background-color: #f00;
+}
+.btn_insu_rew:hover
+{
+    color: #202021; 
+    background-color: #fff;
+}
+
 body
 {
     opacity: 0;
@@ -10738,6 +10766,15 @@ footer .wr .soc_links li:nth-child(3) a
     -ms-flex-align: center;
             align-items: center;
 }
+@media screen and (max-width: 690px)
+{
+    .products_container .tab-content .product_item_numbers .numbers_container
+    {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+    }
+}
 .products_container .tab-content .product_item_numbers .numbers_container .numbers_item
 {
     font-size: 18px;
@@ -10748,6 +10785,8 @@ footer .wr .soc_links li:nth-child(3) a
     display: -ms-flexbox;
     display:         flex;
             flex-direction: column;
+
+    padding: 5px; 
 
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
@@ -10766,11 +10805,29 @@ footer .wr .soc_links li:nth-child(3) a
     -ms-flex-align: center;
             align-items: center;
 }
+@media screen and (max-width: 415px)
+{
+    .products_container .tab-content .product_item_numbers .numbers_container .numbers_item
+    {
+        margin-top: 15px; 
+
+        -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+    }
+}
 .products_container .tab-content .product_item_numbers .numbers_container .numbers_item .num
 {
-    font-size: 75px;
+    font-size: 72px;
 
     color: #f00;
+}
+@media screen and (max-width: 690px)
+{
+    .products_container .tab-content .product_item_numbers .numbers_container .numbers_item .num
+    {
+        font-size: 30px;
+    }
 }
 .products_container .tab-content .product_item_numbers .numbers_container .numbers_item .num span
 {
@@ -10778,9 +10835,25 @@ footer .wr .soc_links li:nth-child(3) a
 
     color: #202021;
 }
+@media screen and (max-width: 690px)
+{
+    .products_container .tab-content .product_item_numbers .numbers_container .numbers_item .num span
+    {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 690px)
+{
+    .products_container .tab-content .product_item_numbers .numbers_container .numbers_item .info
+    {
+        font-size: 14px;
+    }
+}
 
 .products_container .tab-content .tab_features .wr
 {
+    position: relative;
+
     display: -webkit-box;
     display: -webkit-flex;
     display:    -moz-box;
@@ -10788,6 +10861,8 @@ footer .wr .soc_links li:nth-child(3) a
     display:         flex;
 
     margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 0; 
 
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -10797,18 +10872,239 @@ footer .wr .soc_links li:nth-child(3) a
 }
 .products_container .tab-content .tab_features .wr .info
 {
+    position: relative;
+    z-index: 1;
+
     width: 50%;
     padding: 30px 30px 50px 30px;
 
-    border: 1px solid #f00; 
-    background-color: #999;
+    -webkit-transition: .3s;
+       -moz-transition: .3s;
+         -o-transition: .3s;
+            transition: .3s;
+
+    border: 1px solid #f00;
+    background-color: rgba(153, 153, 153, .9);
+    -webkit-box-shadow: 2px 0 5px 0 rgba(0, 0, 0, .5);
+            box-shadow: 2px 0 5px 0 rgba(0, 0, 0, .5);
+}
+@media screen and (max-width: 1100px)
+{
+    .products_container .tab-content .tab_features .wr .info
+    {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 980px)
+{
+    .products_container .tab-content .tab_features .wr .info
+    {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 950px)
+{
+    .products_container .tab-content .tab_features .wr .info
+    {
+        width: 100%;
+    }
 }
 .products_container .tab-content .tab_features .wr .info h2
 {
     margin-top: 0;
+    margin-bottom: 15px; 
     padding-top: 0;
+
+    color: #f00;
+}
+.products_container .tab-content .tab_features .wr .info p
+{
+    color: #fff;
 }
 .products_container .tab-content .tab_features .wr .img
 {
+    z-index: 0;
+
     width: 50%;
+    height: 280px;
+
+    -webkit-transition: .3s;
+       -moz-transition: .3s;
+         -o-transition: .3s;
+            transition: .3s; 
+
+    background-image: url(../img/baby.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+@media screen and (max-width: 1100px)
+{
+    .products_container .tab-content .tab_features .wr .img
+    {
+        width: 40%;
+
+        background-position: -60px center;
+    }
+}
+@media screen and (max-width: 980px)
+{
+    .products_container .tab-content .tab_features .wr .img
+    {
+        width: 30%;
+    }
+}
+@media screen and (max-width: 950px)
+{
+    .products_container .tab-content .tab_features .wr .img
+    {
+        position: absolute;
+        top: -15px;
+        right: 0;
+        bottom: -15px;
+        left: 0;
+
+        width: 100%;
+        height: auto; 
+
+        background-position: center;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+    }
+}
+@media screen and (max-width: 570px)
+{
+    .products_container .tab-content .tab_features .wr .img
+    {
+        background-position: -100px center;
+    }
+}
+@media screen and (max-width: 400px)
+{
+    .products_container .tab-content .tab_features .wr .img
+    {
+        background-position: -150px center;
+    }
+}
+
+.products_container .tab-content .tab_conditions .wr h2
+{
+    color: #202021;
+}
+
+.products_container .tab-content .tab_conditions .wr p
+{
+    padding-top: 20px;
+    padding-bottom: 0; 
+
+    color: #999;
+}
+.products_container .tab-content .tab_conditions .wr p span
+{
+    color: #f00;
+}
+
+.products_container .tab-content .calculate
+{
+    margin-top: 50px; 
+    margin-bottom: 70px;
+
+    background-color: #f00;
+}
+.products_container .tab-content .calculate .wr
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+
+    padding: 0;
+}
+@media screen and (max-width: 830px)
+{
+    .products_container .tab-content .calculate .wr
+    {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+    }
+}
+.products_container .tab-content .calculate .wr .item
+{
+    width: 50%;
+
+    border: 1px solid #f00;
+    background-color: #fff;
+    background-image: url(../img/calc_1.jpg);
+    background-repeat: no-repeat;
+    background-position: 30px bottom;
+}
+@media screen and (max-width: 830px)
+{
+    .products_container .tab-content .calculate .wr .item
+    {
+        width: 100%;
+    }
+}
+.products_container .tab-content .calculate .wr .item .wrap
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    margin-left: 200px;
+    padding: 10px; 
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.products_container .tab-content .calculate .wr .item .wrap h2
+{
+    margin: 0;
+    padding-top: 60px;
+}
+.products_container .tab-content .calculate .wr .item .wrap .btn_insu
+{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.products_container .tab-content .calculate .wr .item:first-child
+{
+    border-right: 0 solid transparent;
+}
+@media screen and (max-width: 830px)
+{
+    .products_container .tab-content .calculate .wr .item:first-child
+    {
+        border-right: 1px solid #f00;
+        border-bottom: 0 solid transparent;
+    }
+}
+.products_container .tab-content .calculate .wr .item:last-child
+{
+    background-image: url(../img/calc_2.png);
+    background-position: -webkit-calc(100% - 20px) center;
+    background-position:    -moz-calc(100% - 20px) center;
+    background-position:         calc(100% - 20px) center;
+}
+.products_container .tab-content .calculate .wr .item:last-child .wrap
+{
+    margin-right: 200px; 
+    margin-left: 0;
 }

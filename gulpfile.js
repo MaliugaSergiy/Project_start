@@ -61,7 +61,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('imagemin', function () {
-    return gulp.src('dev/img/**/*')
+    return gulp.src(['dev/img/**/*.jpg', 'dev/img/**/*.png'])
         .pipe(imagemin())
         .pipe(gulp.dest('build/img'))
         .pipe(browserSync.stream());
@@ -78,7 +78,7 @@ gulp.task('js', function () {
 });
 
 gulp.task('default', function () {
-    gulp.start('css',    'lib', 'html', 'js', 'imagemin', 'browser-sync');
+    gulp.start('css',    'lib', 'html', 'js', 'browser-sync');
 
     gulp.watch(['dev/sass/*.*'], function () {
         gulp.start('css');
