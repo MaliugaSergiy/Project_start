@@ -10413,13 +10413,18 @@ footer .wr .soc_links li a
 
     width: 30px;
     height: 30px;
-    margin-right: 20px; 
+    margin-right: 20px;
 
+    opacity: .5; 
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: contain;
          -o-background-size: contain;
             background-size: contain;
+}
+footer .wr .soc_links li a:hover
+{
+    opacity: 1;
 }
 @media screen and (max-width: 750px)
 {
@@ -11284,6 +11289,7 @@ footer .wr .soc_links li:nth-child(3) a
 .product_container .nav-tabs-top
 {
     margin-top: 25px;
+    margin-bottom: 30px;
 
     border: none;
 }
@@ -11324,12 +11330,13 @@ footer .wr .soc_links li:nth-child(3) a
     width: 190px;
     height: 170px;
 
-    background-image: url(../img/product_sl_1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: contain;
          -o-background-size: contain;
             background-size: contain;
+    -webkit-box-shadow: 0 0 10px -1px red;
+            box-shadow: 0 0 10px -1px red;
 }
 .product_container .nav-tabs-top li a .name
 {
@@ -11338,4 +11345,8 @@ footer .wr .soc_links li:nth-child(3) a
     margin-top: 20px; 
 
     text-align: center;
+}
+.product_container .nav-tabs-top li:nth-child(1) .image
+{
+    background-image: url(../img/product_sl_1.jpg);
 }

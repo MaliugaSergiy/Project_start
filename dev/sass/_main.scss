@@ -912,6 +912,10 @@ footer {
                     background-repeat: no-repeat;
                     background-size: contain;
                     margin-right: 20px;
+                    opacity: 0.5;
+                    &:hover {
+                        opacity: 1;
+                    }
                     @media screen and (max-width: 750px) {
                         width: 35px;
                         height: 35px;
@@ -1395,6 +1399,7 @@ footer {
 .product_container {
     .nav-tabs-top { // ul
         margin-top: 25px;
+        margin-bottom: 30px;
         border: none;
         li {
             border: none;
@@ -1409,10 +1414,11 @@ footer {
                     display: block;
                     width: 190px;
                     height: 170px;
-                    background-image: url(../img/product_sl_1.jpg);
+                    //background-image: url(../img/product_sl_1.jpg);
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: contain;
+                    box-shadow: 0px 0px 10px -1px rgba(255,0,0,1);
                     //border: 1px solid $m_grey;
                 }
                 .name {
@@ -1421,6 +1427,9 @@ footer {
                     margin-top: 20px;
                 }
             }
+            &:nth-child(1) .image {
+                background-image: url(../img/product_sl_1.jpg);
+            } 
         }
     }
 }
