@@ -2183,7 +2183,130 @@ footer {
                     transform: scaleX(1);
                     opacity: 1;
                 }
-            } 
+            }
+        }
+    }
+}
+
+.insur_calculator {
+    .wr {
+        max-width: 630px;
+        margin-bottom: 50px;
+        form {
+            h2 {
+                padding-top: 20px;
+            }
+            .form_row {
+                display: flex;
+                padding: 10px 0;
+                align-items: center;
+                justify-content: space-between;
+                @media screen and (max-width: 580px) {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+                .name {
+                    color: $m_grey;
+                    @media screen and (max-width: 580px) {
+                    margin-bottom: 5px;
+                        font-size: 16px;
+                }
+
+                }
+                select {
+                    max-width: 210px;
+                    width: 100%;
+                    padding: 8px 10px;
+                    border-radius: 3px;
+                    border: 1px solid $m_grey;
+                    color: $m_grey;
+                    background-color: #F0F0F0;
+                    font-size: 16px;
+                }
+                input {
+                    max-width: 210px;
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 3px;
+                    border: 1px solid $m_grey;
+                    color: $m_grey;
+                    background-color: #F0F0F0;
+                    font-size: 16px;
+                    &::placeholder {
+                        font-size: 16px;
+                    }
+                }
+            }
+            h3 {}
+            .sex {
+                display: flex;
+                justify-content: center;
+                label {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 20px;
+                    cursor: pointer;
+                    input {
+                        display: none;
+                        &:checked + .name_radio {
+                            color: $m_red;
+                        }
+                    }
+                    .image {
+                        width: 36px;
+                        height: 75px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        transition: 0.5s;
+
+                    }
+                    .name_radio {
+                        color: $m_grey;
+                        transition: 0.5s;
+                    }
+
+                    &:first-child .image {
+                        background-image: url(../img/icons/14.png);
+                    }
+                    &:last-child .image {
+                        background-image: url(../img/icons/12.png);
+                    }
+                    &:first-child input:checked ~ .image,
+                    &:first-child:hover .image {
+                        background-image: url(../img/icons/11.png);
+                    }
+                    &:last-child input:checked ~ .image,
+                    &:last-child:hover .image {
+                        background-image: url(../img/icons/13.png);
+                    }
+                    &:first-child input:checked ~ .image {
+                        background-image: url(../img/icons/11.png);
+                    }
+                    &:last-child input:checked ~ .image {
+                        background-image: url(../img/icons/13.png);
+                    }
+                    &:first-child input:checked ~ .name_radio {
+                        color: $m_red;
+                    }
+                    &:last-child input:checked ~ .name_radio {
+                        color: $m_red;
+                    }
+
+                }
+            }
+            .btn_wrap {
+                display: flex;
+                margin-top: 50px;
+                justify-content: center;
+            }
+            .btn_submit {
+                margin: auto;
+            }
         }
     }
 }

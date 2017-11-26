@@ -9440,6 +9440,11 @@ input:focus:-moz-placeholder
 
     padding: 5px 45px;
 
+    -webkit-transition: .5s;
+       -moz-transition: .5s;
+         -o-transition: .5s;
+            transition: .5s; 
+
     color: #202021;
     border: 1px solid #f00;
     -webkit-border-radius: 4px;
@@ -13370,4 +13375,257 @@ footer .wr .soc_links li:nth-child(3) a
             transform: scaleX(1);
 
     opacity: 1;
+}
+
+.insur_calculator .wr
+{
+    max-width: 630px;
+    margin-bottom: 50px;
+}
+.insur_calculator .wr form h2
+{
+    padding-top: 20px;
+}
+.insur_calculator .wr form .form_row
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+
+    padding: 10px 0;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+@media screen and (max-width: 580px)
+{
+    .insur_calculator .wr form .form_row
+    {
+                flex-direction: column;
+
+        text-align: center; 
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+        -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+    }
+}
+.insur_calculator .wr form .form_row .name
+{
+    color: #999;
+}
+@media screen and (max-width: 580px)
+{
+    .insur_calculator .wr form .form_row .name
+    {
+        font-size: 16px; 
+
+        margin-bottom: 5px;
+    }
+}
+.insur_calculator .wr form .form_row select
+{
+    font-size: 16px; 
+
+    width: 100%;
+    max-width: 210px;
+    padding: 8px 10px;
+
+    color: #999;
+    border: 1px solid #999;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    background-color: #f0f0f0;
+}
+.insur_calculator .wr form .form_row input
+{
+    font-size: 16px; 
+
+    width: 100%;
+    max-width: 210px;
+    padding: 10px;
+
+    color: #999;
+    border: 1px solid #999;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    background-color: #f0f0f0;
+}
+.insur_calculator .wr form .form_row input::-webkit-input-placeholder
+{
+    font-size: 16px;
+}
+.insur_calculator .wr form .form_row input:-moz-placeholder
+{
+    font-size: 16px;
+}
+.insur_calculator .wr form .form_row input::-moz-placeholder
+{
+    font-size: 16px;
+}
+.insur_calculator .wr form .form_row input:-ms-input-placeholder
+{
+    font-size: 16px;
+}
+.insur_calculator .wr form .form_row input::-ms-input-placeholder
+{
+    font-size: 16px;
+}
+.insur_calculator .wr form .form_row input::placeholder
+{
+    font-size: 16px;
+}
+.insur_calculator .wr form .sex
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+}
+.insur_calculator .wr form .sex label
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    margin: 20px;
+
+    cursor: pointer; 
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.insur_calculator .wr form .sex label input
+{
+    display: none;
+}
+.insur_calculator .wr form .sex label input:checked + .name_radio
+{
+    color: #f00;
+}
+.insur_calculator .wr form .sex label .image
+{
+    width: 36px;
+    height: 75px;
+
+    -webkit-transition: .5s;
+       -moz-transition: .5s;
+         -o-transition: .5s;
+            transition: .5s; 
+
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: contain;
+         -o-background-size: contain;
+            background-size: contain;
+}
+.insur_calculator .wr form .sex label .name_radio
+{
+    -webkit-transition: .5s;
+       -moz-transition: .5s;
+         -o-transition: .5s;
+            transition: .5s; 
+
+    color: #999;
+}
+.insur_calculator .wr form .sex label:first-child .image
+{
+    background-image: url(../img/icons/14.png);
+}
+.insur_calculator .wr form .sex label:last-child .image
+{
+    background-image: url(../img/icons/12.png);
+}
+.insur_calculator .wr form .sex label:first-child input:checked ~ .image,
+.insur_calculator .wr form .sex label:first-child:hover .image
+{
+    background-image: url(../img/icons/11.png);
+}
+.insur_calculator .wr form .sex label:last-child input:checked ~ .image,
+.insur_calculator .wr form .sex label:last-child:hover .image
+{
+    background-image: url(../img/icons/13.png);
+}
+.insur_calculator .wr form .sex label:first-child input:checked ~ .image
+{
+    background-image: url(../img/icons/11.png);
+}
+.insur_calculator .wr form .sex label:last-child input:checked ~ .image
+{
+    background-image: url(../img/icons/13.png);
+}
+.insur_calculator .wr form .sex label:first-child input:checked ~ .name_radio
+{
+    color: #f00;
+}
+.insur_calculator .wr form .sex label:last-child input:checked ~ .name_radio
+{
+    color: #f00;
+}
+.insur_calculator .wr form .btn_wrap
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+
+    margin-top: 50px;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+}
+.insur_calculator .wr form .btn_submit
+{
+    margin: auto;
 }

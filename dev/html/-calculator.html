@@ -1,0 +1,93 @@
+<!--#insert file="html/-top.html"-->
+<div class="insur_calculator">
+    <div class="wr">
+        <form action="">
+            <h2>Калькулятор</h2>
+            <div class="form_row">
+                <div class="name">Выберите программу страхования:</div>
+                <select>
+                    <option value="live">Жизнь</option>
+                    <option value="childrenCapital">Детский капитал</option>
+                    <option value="lediLife">Леди Лайф</option>
+                    <option value="prog_11">Программа «11»</option>
+                    <option value="investLife">Инвест Лайф</option>
+                    <option value="premiumLife">Премиум-Лайф</option>
+                    <option value="forteLife">Форте-Лайф</option>
+                    <option value="pension">Пенсия</option>
+                    <option value="pensionCapital">Пенсионный капитал</option>
+                </select>
+            </div>
+            <h3>Данные о Застрахованном</h3>
+            <div class="sex">
+                <label for="male">
+                    <input type="radio" checked id="male" name="sex">
+                    <div class="image"></div>
+                    <span class="name_radio" >мужской</span>
+                </label>
+                <label for="female">
+                    <input type="radio" id="female" name="sex">
+                    <div class="image"></div>
+                    <span class="name_radio">женский</span>
+                </label>
+            </div>
+            <div class="form_row">
+                <div class="name">Дата рождения:</div>
+                <input type="text" placeholder="01.01.2015">
+            </div>
+            <div class="form_row">
+                <div class="name">Срок страхования:</div>
+                <input type="text" placeholder="от 1 - 30 лет">
+            </div>
+            <div class="form_row">
+                <div class="name">Периодичность уплаты взносов:</div>
+                <select>
+                    <option value="">Одноразовый</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="form_row">
+                <div class="name">Что хотите расчитать?</div>
+                <select>
+                    <option value="">Страховую сумму</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="form_row">
+                <div class="name">Укажите желаемую Страховую сумму:</div>
+                <input type="text">
+            </div>
+            <div class="form_row">
+                <div class="name">Смерть во время действия договора:</div>
+                <select>
+                    <option value="">Фиксированная сумма</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="btn_wrap">
+                <button type="submit" class="btn_submit btn_insu btn_insu_rew">Расчитать</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!--#insert file="html/-bottom.html"-->
