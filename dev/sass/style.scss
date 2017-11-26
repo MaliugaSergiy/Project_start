@@ -11,6 +11,7 @@
 @import "_remodal-default-theme";
 //@import "_mdb";
 @import "_vars";
+@import "_tooltipster.bundle.min";
 
 
 //@import "_slide-and-swipe-menu";
@@ -250,6 +251,23 @@ input:focus:-moz-placeholder { /* Firefox 18- */
         color: $m_Dgrey;
     }
 }
+.tooltip {
+    opacity: 1;
+}
+/* This is how you would create a custom secondary theme on top of tooltipster-noir: */
+
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-box {
+	background: #fff;
+	border: 3px solid $m_grey;
+	border-radius: 6px;
+	box-shadow: 5px 5px 2px 0 rgba(0,0,0,0.4);
+}
+
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-content {
+	color: $m_grey;
+	padding: 8px;
+}
+
 
 @import "_main.scss";
 

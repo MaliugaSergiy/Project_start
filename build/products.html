@@ -87,6 +87,7 @@
 	<script src="lib/jquery.mmenu.fixedelements.js"></script>
 
 	<script src="lib/jquery.mmenu.settings.js"> </script>
+	<script src="lib/tooltipster.bundle.min.js"> </script>
 
 	<script src="lib/slick.js"></script>
 
@@ -102,7 +103,7 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 
-	<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 	<!--    <link rel="stylesheet" href="css/slide-and-swipe-menu.css">-->
 
@@ -120,16 +121,22 @@
 			<header class="header Fixed" style=" position: fixed; left: 0;top: 0;width: 100%;">
 				<div class="wr">
                     
-                    <a href="tel:+380445911858" class="head_phone"><i class="fa fa-phone" aria-hidden="true"></i> <span class="tel">+38 044 591 18 58</span></a>
+                    <a href="tel:+380445911858" class="head_phone par_tooltip" >
+                    
+                        <i class="fa fa-phone" aria-hidden="true"></i> 
+                        <span class="tel">+38 044 591 18 58</span>
+                        <span class="tooltip" title="Позвонить нам"> </span>
+                    </a>
                     <a href="/" class="logo_wr"><img src="img/logo.png" alt="Forte life" title="Forte life"></a>
                     <div class="right_coll">
-                     <a href="" class="contacts_header"><i class="material-icons">&#xE55F;</i><span>Контакты</span></a>
-                      <a href="#" class="user_header"></a>
-                      <a href="#" class="pay_header"></a>
-                         <a class="burger hamburger hamburger--spin" href="#menu">
+                     <a href="" class="contacts_header " title="Наши контакты"><i class="material-icons">&#xE55F;</i><span>Контакты</span></a>
+                      <a href="#" class="user_header tooltip" title="Иванов Иван"></a>
+                      <a href="#" class="pay_header tooltip" title="Оплатить"></a>
+                         <a class="burger hamburger hamburger--spin par_tooltip" href="#menu">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
                             </span>
+                            <span class="tooltip" title="Открыть меню"> </span>
                         </a>
                     </div>
 				</div>
@@ -198,7 +205,7 @@
             </div>
             <div class="tab_features">
                 <div class="wr">
-                    <div class="info">
+                    <div class="info wow fadeInRight">
                         <h2>Особенности продукта</h2>
                         <p>Клиент может заключить договор сразу в день обращения</p>
                         <p>Клиент получает выплаты на восстановление здоровья после несчастных случаев, которым чаще всего подвержен ребенок (травмы, ожоги, госпитализация и другие)</p>
@@ -292,9 +299,15 @@
 		<div class="wr">
             <div class="copypight item">Свидетельство о государственной регистрации А01 № 570888, выдано 08.12.2005 г.</div>
             <ul class="soc_links item">
-                <li><a href="#" target="_blank"></a></li>
-                <li><a href="#" target="_blank"></a></li>
-                <li><a href="#" target="_blank"></a></li>
+                <li><a href="#" target="_blank" class="par_tooltip">
+                    <span class="tooltip" title="Мы в Instagram"></span>
+                </a></li>
+                <li><a href="#" target="_blank" class="par_tooltip">
+                    <span class="tooltip" title="Мы в YouTube" ></span>
+                </a></li>
+                <li><a href="#" target="_blank" class="par_tooltip">
+                    <span class="tooltip" title="Мы в Facebook"></span>
+                </a></li>
             </ul>
 		</div>
 	</div>
@@ -400,6 +413,7 @@
 <script src="lib/remodal.min.js"></script>
 
 <script src="lib/ofi.min.js"></script>
+<script src="lib/wow.min.js"></script>
 
 
 

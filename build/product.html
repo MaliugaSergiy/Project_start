@@ -87,6 +87,7 @@
 	<script src="lib/jquery.mmenu.fixedelements.js"></script>
 
 	<script src="lib/jquery.mmenu.settings.js"> </script>
+	<script src="lib/tooltipster.bundle.min.js"> </script>
 
 	<script src="lib/slick.js"></script>
 
@@ -102,7 +103,7 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 
-	<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 	<!--    <link rel="stylesheet" href="css/slide-and-swipe-menu.css">-->
 
@@ -120,16 +121,22 @@
 			<header class="header Fixed" style=" position: fixed; left: 0;top: 0;width: 100%;">
 				<div class="wr">
                     
-                    <a href="tel:+380445911858" class="head_phone"><i class="fa fa-phone" aria-hidden="true"></i> <span class="tel">+38 044 591 18 58</span></a>
+                    <a href="tel:+380445911858" class="head_phone par_tooltip" >
+                    
+                        <i class="fa fa-phone" aria-hidden="true"></i> 
+                        <span class="tel">+38 044 591 18 58</span>
+                        <span class="tooltip" title="Позвонить нам"> </span>
+                    </a>
                     <a href="/" class="logo_wr"><img src="img/logo.png" alt="Forte life" title="Forte life"></a>
                     <div class="right_coll">
-                     <a href="" class="contacts_header"><i class="material-icons">&#xE55F;</i><span>Контакты</span></a>
-                      <a href="#" class="user_header"></a>
-                      <a href="#" class="pay_header"></a>
-                         <a class="burger hamburger hamburger--spin" href="#menu">
+                     <a href="" class="contacts_header " title="Наши контакты"><i class="material-icons">&#xE55F;</i><span>Контакты</span></a>
+                      <a href="#" class="user_header tooltip" title="Иванов Иван"></a>
+                      <a href="#" class="pay_header tooltip" title="Оплатить"></a>
+                         <a class="burger hamburger hamburger--spin par_tooltip" href="#menu">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
                             </span>
+                            <span class="tooltip" title="Открыть меню"> </span>
                         </a>
                     </div>
 				</div>
@@ -183,24 +190,24 @@
     </nav>
     <div class="youGet">
         <div class="wr">
-            <h2>С полисом страхования жизни Вы получите:</h2>
+            <h2 class="wow fadeInUp">С полисом страхования жизни Вы получите:</h2>
             <div class="flexCont">
-                <div class="item">
+                <div class="item wow bounceInUp"  data-wow-delay="0s">
                     <div class="image"></div>
                     <div class="name">Финансовую помощь при травмах</div>
                     <div class="descr">Если произойдёт несчастный случай, компания выплатит средства на лечение и восстановление здоровья</div>
                 </div>
-                <div class="item">
-                    <div class="image"></div>
+                <div class="item wow bounceInUp"  data-wow-delay="0.2s">
+                    <div class="image" ></div>
                     <div class="name">Защиту при болезнях</div>
                     <div class="descr">В случае диагностирования критического заболевания вы получите денежные средства на лечение и реабилитацию. </div>
                 </div>
-                <div class="item">
-                    <div class="image"></div>
+                <div class="item wow bounceInUp" data-wow-delay="0.4s">
+                    <div class="image" ></div>
                     <div class="name">Финансовую поддержку близких</div>
                     <div class="descr">Компания финансово обеспечит семью, даже если вас уже не будет рядом. Мы поможем семье в первый, самый сложный период после трагического события.</div>
                 </div>
-                <div class="item">
+                <div class="item wow bounceInUp"  data-wow-delay="0.6s">
                     <div class="image"></div>
                     <div class="name">Накопления на будущее</div>
                     <div class="descr">Отличие долгосрочного страхования жизни от других видов страхования заключается в том, что Вы не просто вносите деньги в оплату страхового полиса.</div>
@@ -211,10 +218,10 @@
     <div class="features">
         <div class="wr">
             <div class="img"></div>
-            <div class="info">
+            <div class="info wow fadeInLeft">
                 <h2>Страхование жизни</h2>
                 <p>Защитит то, что действительно дорого — Вашу жизнь и здоровье, благополучие Ваших близких, Ваше будущее.</p>
-                <a href="#" class="btn_insu ">Узнать больше</a>
+                <a href="#" class="btn_insu wow bounceIn ">Узнать больше</a>
             </div>
 
         </div>
@@ -232,13 +239,13 @@
             <div class="item">
                 <div class="wrap">
                     <h2>Расчитать страховой полис</h2>
-                    <a href="#" class="btn_insu btn_insu_rew">Расчитать</a>
+                    <a href="#" class="btn_insu btn_insu_rew  wow bounceIn">Расчитать</a>
                 </div>
             </div>
             <div class="item">
                 <div class="wrap">
                     <h2>Оплатить страховой полис</h2>
-                    <a href="#" class="btn_insu">Оплатить</a>
+                    <a href="#" class="btn_insu  wow bounceIn">Оплатить</a>
                 </div>
             </div>
         </div>
@@ -246,10 +253,10 @@
     <div class="features features-bottom">
         <div class="wr">
             
-            <div class="info">
+            <div class="info wow fadeInRight">
                 <h2>Для корпоративных клиентов</h2>
                 <p>Корпоративное накопительное страхование является неотъемлемым элементом управления персоналом. Такие программы помогают руководителю построить эффективное управление финансовыми потоками предприятия, решив при этом «кадровый вопрос»</p>
-                <a href="#" class="btn_insu ">Узнать больше</a>
+                <a href="#" class="btn_insu  wow bounceIn">Узнать больше</a>
             </div>
             <div class="img"></div>
 
@@ -334,9 +341,15 @@
 		<div class="wr">
             <div class="copypight item">Свидетельство о государственной регистрации А01 № 570888, выдано 08.12.2005 г.</div>
             <ul class="soc_links item">
-                <li><a href="#" target="_blank"></a></li>
-                <li><a href="#" target="_blank"></a></li>
-                <li><a href="#" target="_blank"></a></li>
+                <li><a href="#" target="_blank" class="par_tooltip">
+                    <span class="tooltip" title="Мы в Instagram"></span>
+                </a></li>
+                <li><a href="#" target="_blank" class="par_tooltip">
+                    <span class="tooltip" title="Мы в YouTube" ></span>
+                </a></li>
+                <li><a href="#" target="_blank" class="par_tooltip">
+                    <span class="tooltip" title="Мы в Facebook"></span>
+                </a></li>
             </ul>
 		</div>
 	</div>
@@ -442,6 +455,7 @@
 <script src="lib/remodal.min.js"></script>
 
 <script src="lib/ofi.min.js"></script>
+<script src="lib/wow.min.js"></script>
 
 
 

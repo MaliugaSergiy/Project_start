@@ -87,6 +87,7 @@
 	<script src="lib/jquery.mmenu.fixedelements.js"></script>
 
 	<script src="lib/jquery.mmenu.settings.js"> </script>
+	<script src="lib/tooltipster.bundle.min.js"> </script>
 
 	<script src="lib/slick.js"></script>
 
@@ -102,7 +103,7 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 
-	<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 	<!--    <link rel="stylesheet" href="css/slide-and-swipe-menu.css">-->
 
@@ -120,16 +121,22 @@
 			<header class="header Fixed" style=" position: fixed; left: 0;top: 0;width: 100%;">
 				<div class="wr">
                     
-                    <a href="tel:+380445911858" class="head_phone"><i class="fa fa-phone" aria-hidden="true"></i> <span class="tel">+38 044 591 18 58</span></a>
+                    <a href="tel:+380445911858" class="head_phone par_tooltip" >
+                    
+                        <i class="fa fa-phone" aria-hidden="true"></i> 
+                        <span class="tel">+38 044 591 18 58</span>
+                        <span class="tooltip" title="Позвонить нам"> </span>
+                    </a>
                     <a href="/" class="logo_wr"><img src="img/logo.png" alt="Forte life" title="Forte life"></a>
                     <div class="right_coll">
-                     <a href="" class="contacts_header"><i class="material-icons">&#xE55F;</i><span>Контакты</span></a>
-                      <a href="#" class="user_header"></a>
-                      <a href="#" class="pay_header"></a>
-                         <a class="burger hamburger hamburger--spin" href="#menu">
+                     <a href="" class="contacts_header " title="Наши контакты"><i class="material-icons">&#xE55F;</i><span>Контакты</span></a>
+                      <a href="#" class="user_header tooltip" title="Иванов Иван"></a>
+                      <a href="#" class="pay_header tooltip" title="Оплатить"></a>
+                         <a class="burger hamburger hamburger--spin par_tooltip" href="#menu">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
                             </span>
+                            <span class="tooltip" title="Открыть меню"> </span>
                         </a>
                     </div>
 				</div>
@@ -147,9 +154,9 @@
             <div class="wr">
                 <div class="info">
                     <div class="info_inner">
-                        <div class="descr">Счастливым владельцам<br> по недвижимости</div>
-                        <div class="under_descr">Упрощенное оформление</div>
-                        <a href="" class="read_more"><span>Узнать больше</span></a>
+                        <div class="descr  wow fadeInRight">Счастливым владельцам<br> по недвижимости</div>
+                        <div class="under_descr  wow fadeInRight" data-wow-delay="0.3s">Упрощенное оформление</div>
+                        <a href="" class="read_more  wow bounceIn"><span>Узнать больше</span></a>
                     </div>
                 </div>
             </div>
@@ -190,28 +197,28 @@
         <h2>Страхование на все случаи жизни</h2>
         <p class="underH2">Узнайте больше обо всех возможностях</p>
         <div class="cont_in">
-            <div class="item">
+            <div class="item wow fadeInLeft">
                 <div class="item_image"></div>
                 <a href="#" class="item_bottom">
                     <div class="name">Жизнь</div>
                     <span class="more">Узнать больше</span>
                 </a>
             </div>
-            <div class="item">
+            <div class="item wow fadeInUp">
                 <div class="item_image"></div>
                 <a href="#" class="item_bottom">
                     <div class="name">Детский капитал</div>
                     <span class="more">Узнать больше</span>
                 </a>
             </div>
-            <div class="item">
+            <div class="item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="item_image"></div>
                 <a href="#" class="item_bottom">
                     <div class="name">Леди Лайф</div>
                     <span class="more">Узнать больше</span>
                 </a>
             </div>
-            <div class="item">
+            <div class="item wow fadeInRight" >
                 <div class="item_image"></div>
                 <a href="#" class="item_bottom">
                     <div class="name">Программа &laquo;11&raquo;</div>
@@ -228,32 +235,32 @@
     <div class="cont_wraper">
         <div class="wr">
             <div class="flex_cont">
-                <div class="flex_item">
+                <div class="flex_item wow zoomIn" data-wow-delay="0s">
                     <div class="image"></div>
                     <div class="name"><span>2016г.</span><span>2017г.</span></div>
                     <div class="under_name">Страховые<br/> премии</div>
                 </div>
-                <div class="flex_item">
+                <div class="flex_item wow zoomIn" data-wow-delay="0.5s">
                     <div class="image"></div>
                     <div class="name">108,7 млн.грн</div>
                     <div class="under_name">Активы<br/> компании</div>
                 </div>
-                <div class="flex_item">
+                <div class="flex_item wow zoomIn" data-wow-delay="0.4s">
                     <div class="image"></div>
                     <div class="name">14,2 млн.грн</div>
                     <div class="under_name">Запас<br/> платежеспособности</div>
                 </div>
-                <div class="flex_item">
+                <div class="flex_item wow zoomIn" data-wow-delay="0s">
                     <div class="image"></div>
                     <div class="name">12 лет</div>
                     <div class="under_name">На рынке<br/> Украины</div>
                 </div>
-                <div class="flex_item">
+                <div class="flex_item wow zoomIn" data-wow-delay="0.2s">
                     <div class="image"></div>
                     <div class="name">86,8 млн.грн</div>
                     <div class="under_name">Резервы</div>
                 </div>
-                <div class="flex_item">
+                <div class="flex_item wow zoomIn" data-wow-delay="0.3s">
                     <div class="image"></div>
                     <div class="name">13 000</div>
                     <div class="under_name">Количество<br/> клиентов</div>
@@ -404,9 +411,15 @@
 		<div class="wr">
             <div class="copypight item">Свидетельство о государственной регистрации А01 № 570888, выдано 08.12.2005 г.</div>
             <ul class="soc_links item">
-                <li><a href="#" target="_blank"></a></li>
-                <li><a href="#" target="_blank"></a></li>
-                <li><a href="#" target="_blank"></a></li>
+                <li><a href="#" target="_blank" class="par_tooltip">
+                    <span class="tooltip" title="Мы в Instagram"></span>
+                </a></li>
+                <li><a href="#" target="_blank" class="par_tooltip">
+                    <span class="tooltip" title="Мы в YouTube" ></span>
+                </a></li>
+                <li><a href="#" target="_blank" class="par_tooltip">
+                    <span class="tooltip" title="Мы в Facebook"></span>
+                </a></li>
             </ul>
 		</div>
 	</div>
@@ -512,6 +525,7 @@
 <script src="lib/remodal.min.js"></script>
 
 <script src="lib/ofi.min.js"></script>
+<script src="lib/wow.min.js"></script>
 
 
 

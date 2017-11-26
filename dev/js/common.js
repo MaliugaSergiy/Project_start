@@ -1,5 +1,15 @@
 $(document).ready(function () {
     
+    $('.tooltip').tooltipster({
+        theme: ['tooltipster-noir', 'tooltipster-noir-customized']
+    });
+    
+    
+    new WOW().init();
+    
+    
+    $('[data-toggle="tooltip"]').tooltip();
+    
         
     	function headerBehaviour() {
 
