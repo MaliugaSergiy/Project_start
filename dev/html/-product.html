@@ -1,6 +1,6 @@
 <!--#insert file="html/-top.html"-->
 <div class="product_container">
-
+    <h2 class="only-mob">Страхование на все случаи жизни</h2>
     <nav>
         <ul class=" nav-slider">
             <li class=""><a href="#">
@@ -41,10 +41,78 @@
             </a></li>
         </ul>
     </nav>
-    <div class="tab-content">
+    <div class="youGet">
+        <div class="wr">
+            <h2>С полисом страхования жизни Вы получите:</h2>
+            <div class="flexCont">
+                <div class="item">
+                    <div class="image"></div>
+                    <div class="name">Финансовую помощь при травмах</div>
+                    <div class="descr">Если произойдёт несчастный случай, компания выплатит средства на лечение и восстановление здоровья</div>
+                </div>
+                <div class="item">
+                    <div class="image"></div>
+                    <div class="name">Защиту при болезнях</div>
+                    <div class="descr">В случае диагностирования критического заболевания вы получите денежные средства на лечение и реабилитацию. </div>
+                </div>
+                <div class="item">
+                    <div class="image"></div>
+                    <div class="name">Финансовую поддержку близких</div>
+                    <div class="descr">Компания финансово обеспечит семью, даже если вас уже не будет рядом. Мы поможем семье в первый, самый сложный период после трагического события.</div>
+                </div>
+                <div class="item">
+                    <div class="image"></div>
+                    <div class="name">Накопления на будущее</div>
+                    <div class="descr">Отличие долгосрочного страхования жизни от других видов страхования заключается в том, что Вы не просто вносите деньги в оплату страхового полиса.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="features">
+        <div class="wr">
+            <div class="img"></div>
+            <div class="info">
+                <h2>Страхование жизни</h2>
+                <p>Защитит то, что действительно дорого — Вашу жизнь и здоровье, благополучие Ваших близких, Ваше будущее.</p>
+                <a href="#" class="btn_insu ">Узнать больше</a>
+            </div>
 
-        <div id="tab_live" class="">
-            1_Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores magni quo nostrum, fuga voluptatum, vitae facilis nam iusto, ipsam modi at expedita! Perferendis, consectetur, sit? Ut esse accusantium, nisi quidem.
+        </div>
+    </div>
+    <div class="insur_descr">
+        <div class="wr">
+            <h2>Как изменится Ваша жизнь с полисом страхования жизни</h2>
+            <p>Акционерное общество «Страховая компания «Форте Лайф» имеет большой опыт в сфере страхования жизни. Мы предлагаем Вам лучшие страховые продукты, которые разрабатывались в соответствии с Вашими потребностями.</p>
+            <p>Исходя их Ваших потребностей и финансовых возможностей, наши специалисты по страхованию жизни подберут именно Вашу программу страхования. Это может быть приобретение жилья, выход на пенсию, эксклюзивная программа страхования, разработанная для женщин, или накопление финансовых средств для вступления Вашего ребенка во взрослую жизнь.</p>
+            <p>Страхование жизни поможет Вам обрести уверенность в завтрашнем дне. Все программы гарантируют Вам рост накоплений за счет гарантированного инвестиционного дохода 4%, а также дополнительного начисления инвестиционного дохода страховой компании.</p>
+        </div>
+    </div>
+    <div class="calculate">
+        <div class="wr">
+            <div class="item">
+                <div class="wrap">
+                    <h2>Расчитать страховой полис</h2>
+                    <a href="#" class="btn_insu btn_insu_rew">Расчитать</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="wrap">
+                    <h2>Оплатить страховой полис</h2>
+                    <a href="#" class="btn_insu">Оплатить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="features features-bottom">
+        <div class="wr">
+            
+            <div class="info">
+                <h2>Для корпоративных клиентов</h2>
+                <p>Корпоративное накопительное страхование является неотъемлемым элементом управления персоналом. Такие программы помогают руководителю построить эффективное управление финансовыми потоками предприятия, решив при этом «кадровый вопрос»</p>
+                <a href="#" class="btn_insu ">Узнать больше</a>
+            </div>
+            <div class="img"></div>
+
         </div>
     </div>
 
@@ -58,8 +126,7 @@
             slidesToShow: 9,
             slidesToScroll: 1,
             speed: 300,
-            responsive: [
-                {
+            responsive: [{
                     breakpoint: 1750,
                     settings: {
                         slidesToShow: 8,
@@ -99,6 +166,16 @@
                     breakpoint: 600,
                     settings: {
                         slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 440,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: false,
+                        infinite: false,
+                        centerMode: true,
+                        centerPadding: '65px',
                     }
                 },
             ]
