@@ -40,6 +40,12 @@ if (document.getElementById("map1")) {
 				lat: 50.451200,
 				lng: 30.470479
 			};
+            var mainAcadLatLng_980 = {
+				lat: 50.454634,
+				lng: 30.489921
+			};
+            
+//            50.454634, 30.489124
 			//    var mainAcadLatLng = {lat: 50.400322, lng: 30.520159};
 
 			var map = new google.maps.Map(document.getElementById('map1'), {
@@ -96,7 +102,7 @@ if (document.getElementById("map1")) {
 			});
 
 			function rerender() {
-				        if (window.innerWidth < 690) {
+				        if (window.innerWidth < 980) {
 				            mainAcadLatLng = mainAcademyCoordinate;
 				            console.log(window.innerWidth);
 				        }
@@ -104,8 +110,8 @@ if (document.getElementById("map1")) {
 				var center = map.getCenter();
 				google.maps.event.trigger(map, "resize");
 
-				if (window.innerWidth < 690) {
-					map.setCenter(mainAcademyCoordinate);
+				if (window.innerWidth < 980) {
+					map.setCenter(mainAcadLatLng_980);
 				} else {
 					map.setCenter(mainAcadLatLng);
 				}

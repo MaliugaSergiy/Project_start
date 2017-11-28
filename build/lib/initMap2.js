@@ -76,15 +76,15 @@ if (document.getElementById("map2")) {
 			});
 
 			google.maps.event.addDomListener(window, 'resize', function () {
-				//        if (window.innerWidth < 690) {
-				//            mainAcadLatLng = mainAcademyCoordinate;
-				//            console.log(window.innerWidth);
-				//        }
+				        if (window.innerWidth < 980) {
+				            mainAcadLatLng = mainAcademyCoordinate;
+				            console.log(window.innerWidth);
+				        }
 
 				var center = map.getCenter();
 				google.maps.event.trigger(map, "resize");
 
-				if (window.innerWidth < 690) {
+				if (window.innerWidth < 980) {
 					map.setCenter(mainAcademyCoordinate);
 				} else {
 					map.setCenter(mainAcadLatLng);
