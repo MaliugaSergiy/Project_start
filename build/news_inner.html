@@ -87,10 +87,15 @@
 	<script src="lib/jquery.mmenu.fixedelements.js"></script>
 
 	<script src="lib/jquery.mmenu.settings.js"> </script>
+	<script src="lib/tooltipster.bundle.min.js"> </script>
+	<script src="lib/headroom.js"> </script>
+	<script src="lib/jquery.spincrement.min.js"> </script>
 
 	<script src="lib/slick.js"></script>
 
 	<script src="lib/jquery.validate.min.js"></script>
+<!--	<script src="lib/okayNav.js"></script>-->
+<!--	<script src="https://cdn.rawgit.com/VPenkov/okayNav/master/app/js/jquery.okayNav.js"></script>-->
 
 	<script src="lib/slick-lightbox.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -100,7 +105,7 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 
-	<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 	<!--    <link rel="stylesheet" href="css/slide-and-swipe-menu.css">-->
 
@@ -118,16 +123,22 @@
 			<header class="header Fixed" style=" position: fixed; left: 0;top: 0;width: 100%;">
 				<div class="wr">
                     
-                    <a href="tel:+380445911858" class="head_phone"><i class="fa fa-phone" aria-hidden="true"></i> <span class="tel">+38 044 591 18 58</span></a>
+                    <a href="tel:+380445911858" class="head_phone par_tooltip" >
+                    
+                        <i class="fa fa-phone" aria-hidden="true"></i> 
+                        <span class="tel">+38 044 591 18 58</span>
+                        <span class="tooltip" title="Позвонить нам"> </span>
+                    </a>
                     <a href="/" class="logo_wr"><img src="img/logo.png" alt="Forte life" title="Forte life"></a>
                     <div class="right_coll">
-                     <a href="" class="contacts_header"><i class="material-icons">&#xE55F;</i><span>Контакты</span></a>
-                      <a href="#" class="user_header"></a>
-                      <a href="#" class="pay_header"></a>
-                         <a class="burger hamburger hamburger--spin" href="#menu">
+                     <a href="" class="contacts_header " title="Наши контакты"><i class="material-icons">&#xE55F;</i><span>Контакты</span></a>
+                      <a href="#" class="user_header tooltip" title="Иванов Иван"></a>
+                      <a href="#" class="pay_header tooltip" title="Оплатить"></a>
+                         <a class="burger hamburger hamburger--spin par_tooltip" href="#menu">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
                             </span>
+                            <span class="tooltip" title="Открыть меню"> </span>
                         </a>
                     </div>
 				</div>
@@ -138,108 +149,7 @@
 
 
 
-<section class="catalog">
 
-    <div class="wr">
-        <div class="roww roww1">
-            <div class="colll coll1">
-                <a href="#">
-                    <div class="img_item img1" style="background-image: url(img/1.jpg)"></div>
-                    <div class="item-label"><span class="name">Мягкая мебель</span> <span class="quntity">620</span> товаров</div>
-                </a>
-            </div>
-            <div class="colll coll2">
-                <a href="#">
-                    <div class="img_item img2" style="background-image: url(img/2.jpg)"></div>
-                    <div class="item-label"><span class="name">Спальня</span> <span class="quntity">1030</span> товаров</div>
-                </a>
-                <a href="#">
-                    <div class="img_item img3" style="background-image: url(img/3.jpg)"></div>
-                    <div class="item-label"><span class="name">Гостинная</span> <span class="quntity">300</span> товаров</div>
-                </a>
-            </div>
-        </div>
-        <div class="roww roww2">
-            <div class="colll coll1">
-                <a href="#">
-                    <div class="img_item img1" style="background-image: url(img/4.jpg)"></div>
-                    <div class="item-label"><span class="name">Столовая</span> <span class="quntity">240</span> товаров</div>
-                </a>
-            </div>
-            <div class="colll coll2">
-                <a href="#">
-                    <div class="img_item img1" style="background-image: url(img/5.jpg)"></div>
-                    <div class="item-label"><span class="name">Кухни</span> <span class="quntity">200</span> товаров</div>
-                </a>
-            </div>
-        </div>
-        <div class="roww roww3">
-            <div class="colll coll1">
-                <a href="#">
-                    <div class="img_item img1" style="background-image: url(img/6.jpg)"></div>
-                    <div class="item-label"><span class="name">Детская</span> <span class="quntity">620</span> товаров</div>
-                </a>
-            </div>
-            <div class="colll coll2">
-                <a href="#">
-                    <div class="img_item img1" style="background-image: url(img/7.jpg)"></div>
-                    <div class="item-label"><span class="name">Прихожая</span> <span class="quntity">220</span> товаров</div>
-                </a>
-            </div>
-            <div class="colll coll3">
-                <a href="#">
-                    <div class="img_item img1" style="background-image: url(img/8.jpg)"></div>
-                    <div class="item-label"><span class="name">Хранение вещей</span> <span class="quntity">95</span> товаров</div>
-                </a>
-            </div>
-        </div>
-        <div class="roww roww4">
-            <div class="colll coll1">
-                <a href="#">
-                    <div class="img_item img1" style="background-image: url(img/9.jpg)"></div>
-                    <div class="item-label"><span class="name">Матрасы</span> <span class="quntity">1020</span> товаров</div>
-                </a>
-            </div>
-            <div class="colll coll2">
-                <a href="#">
-                    <div class="img_item img1" style="background-image: url(img/10.jpg)"></div>
-                    <div class="item-label"><span class="name">Офис и домашний кабинет</span><span class="quntity"> 620</span> товаров</div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-</section>
-
-<section class="advantage">
-    <div class="wr">
-        <div class="item item1">
-            <div class="descr">Богатый выбор</div>
-        </div>
-        <div class="item item2">
-            <div class="descr">Высокое качество</div>
-        </div>
-        <div class="item item3">
-            <div class="descr">Новые мебельные решения</div>
-        </div>
-        <div class="item item4">
-            <div class="descr">Гибкие цены</div>
-        </div>
-        <div class="item item5">
-            <div class="descr">Высокий уровень сервиса</div>
-        </div>
-        <div class="item item6">
-            <div class="descr">Оперативность поставки и сборки</div>
-        </div>
-    </div>
-</section>
-<section class="aboutUs">
-    <div class="wr">
-        <div class="name"><span class="after_figure">Мебель Элит</span></div>
-        <p>Интернет-магазин мебели ЭЛИТ, работающий на всей территории России, готов предоставить вашему вниманию самый разнообразный выбор в категории «Мебель». Наши товары – это прямые поставки от российских и иностранных производителей и официальных дистрибьюторов европейских и американских фабрик. Отсутствие посредников позволяет нам предлагать клиентам лучшие цены. Вся импортная продукция ввезена в Россию официально. Особенно выгодным соотношением качества и цены отличается мебель под нашей собственной торговой маркой . Весь товар сертифицирован, на него поддерживается гарантийный срок.</p>
-        <p>Наша компания с 2009 года успешно занимается поставкой мебели для дома, офиса и дачи, мы работаем напрямую с ведущими производителями и поставщиками мебели и аксессуаров. Для вас мы предлагаем мебель более 100 мебельных фабрик, расположенных в разных регионах Украины. Изделия данных фабрик проверены временем и пользуются заслуженной любовью покупателей. Мы понимаем, как важно для вас получить действительно качественное изделие по доступной цене и стремимся поддерживать цены строго в пределах, рекомендованных производителем, а зачастую и ниже. </p>
-    </div>
-</section>
 
 
 </div> <!-- <div class="content"> -->
@@ -248,9 +158,15 @@
 		<div class="wr">
             <div class="copypight item">Свидетельство о государственной регистрации А01 № 570888, выдано 08.12.2005 г.</div>
             <ul class="soc_links item">
-                <li><a href="#" target="_blank"></a></li>
-                <li><a href="#" target="_blank"></a></li>
-                <li><a href="#" target="_blank"></a></li>
+                <li><a href="#" target="_blank" class="par_tooltip">
+                    <span class="tooltip" title="Мы в Instagram"></span>
+                </a></li>
+                <li><a href="#" target="_blank" class="par_tooltip">
+                    <span class="tooltip" title="Мы в YouTube" ></span>
+                </a></li>
+                <li><a href="#" target="_blank" class="par_tooltip">
+                    <span class="tooltip" title="Мы в Facebook"></span>
+                </a></li>
             </ul>
 		</div>
 	</div>
@@ -320,6 +236,8 @@
 
 
 
+<!--scripts for all pages-->
+
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
 <!-- <script src="lib/popper.min.js"></script> -->
@@ -330,6 +248,8 @@
 <script src="lib/html5shiv/html5shiv-printshiv.min.js"></script>
 <script src="lib/respond/respond.min.js"></script>
 <![endif]-->
+
+
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
@@ -356,6 +276,8 @@
 <script src="lib/remodal.min.js"></script>
 
 <script src="lib/ofi.min.js"></script>
+<script src="lib/wow.min.js"></script>
+
 
 
 

@@ -3,8 +3,8 @@ $(document).ready(function () {
     $('.tooltip').tooltipster({
         theme: ['tooltipster-noir', 'tooltipster-noir-customized']
     });
-
-
+    
+    
     new WOW().init();
 
     //    $("header").headroom();
@@ -14,7 +14,7 @@ $(document).ready(function () {
     // construct an instance of Headroom, passing the element
     var headroom = new Headroom(myElement, {
         "offset": 120,
-        "tolerance": 5,
+        "tolerance": { up : 20, down : 10 },
         "classes": {
             "initial": "animated",
             "pinned": "slideDown",
@@ -180,6 +180,8 @@ $(document).ready(function () {
 
 
 });
+
+
 
 
 /**/

@@ -9,7 +9,7 @@ h2 {
     text-align: center;
     font-size: 24px;
     color: $m_Dgrey;
-    padding-top: 50px;
+    padding-top: 20px;
     margin-bottom: 5px;
     @media screen and (max-width: 420px) {
         font-size: 22px;
@@ -61,7 +61,8 @@ a:focus {
     transform: translateY(0px);
     opacity: 1;
     transition: opacity 0.5s;
-    &.header_hidden, &.slideUp {
+    &.header_hidden,
+    &.slideUp {
         opacity: 0;
         transform: translateY(-100px);
         transition: 1s;
@@ -474,7 +475,6 @@ a:focus {
                 border-bottom: 1px solid $m_grey;
                 border-left: 1px solid $m_grey; //                border-right: 1px solid transparent;
                 flex-basis: 25%;
-
                 position: relative;
                 transition: 0.3s;
                 position: relative;
@@ -494,6 +494,9 @@ a:focus {
                     border: 1px solid $m_red !important;
                     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
                     margin-bottom: 15px;
+                }
+                &:hover .name {
+                    font-weight: bold;
                 }
                 &:hover .item_bottom {}
                 @media screen and (max-width: 900px) {
@@ -773,6 +776,7 @@ a:focus {
             bottom: 0;
             z-index: 1;
             transition: 0.5s;
+            pointer-events: none;
         }
         &::before {
             left: 0;
@@ -1215,6 +1219,9 @@ footer {
             }
         }
         .product_item_numbers {
+            .spincrement {
+                display: inline;
+            }
             .numbers_container {
                 display: flex;
                 justify-content: center;
@@ -1456,7 +1463,7 @@ footer {
         margin-bottom: 30px;
         border: none;
         position: relative;
-
+        &:before,
         &:after {
             content: "";
             display: none;
@@ -1557,7 +1564,7 @@ footer {
             padding: 40px 0;
 
         }
-
+        .slick-prev,
         .slick-next {
             width: 20px;
             height: 20px;
@@ -1896,6 +1903,7 @@ footer {
         margin-top: 40px;
         margin-bottom: 70px;
         display: flex;
+        overflow: hidden;
         justify-content: space-between;
         @media screen and (max-width: 930px) {
             flex-wrap: wrap;
@@ -2480,16 +2488,16 @@ footer {
                     //                color: $m_red;
                 }
                 &:checked + label {
-                    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+                    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
                 }
                 &:checked + label:nth-of-type(1) .image {
-                    background-image: url(../img/icons/24.png);
+                    background-image: url(../img/icons/pay_visa_a.png);
                 }
                 &:checked + label:nth-of-type(2) .image {
-                    background-image: url(../img/icons/27.png);
+                    background-image: url(../img/icons/pay_quitung_a.png);
                 }
                 &:checked + label:nth-of-type(3) .image {
-                    background-image: url(../img/icons/28.png);
+                    background-image: url(../img/icons/pay_privat_a.png);
                 }
 
             }
@@ -2502,14 +2510,17 @@ footer {
                 border: 1px solid $m_grey;
                 margin: 50px 10px 0;
                 transition: 0.5s;
+                &:hover .name_radio {
+                    color: $m_red;
+                }
                 @media screen and (max-width: 650px) {
                     margin: 50px 4px 0;
                 }
                 @media screen and (max-width: 415px) {
                     flex-basis: 100%;
-                   max-width: 125px;
-                     margin: 20px 4px 0;
-                    
+                    max-width: 125px;
+                    margin: 20px 4px 0;
+
                 }
 
                 .name_radio {
@@ -2517,30 +2528,33 @@ footer {
                     font-size: 16px;
                     font-weight: 300;
                     padding: 8px;
+                    transition: 0.5s;
                     @media screen and (max-width: 650px) {
                         font-size: 10px;
                     }
                 }
                 .image {
-                    width: 180px;
-                    height: 115px;
+                    width: 140px;
+                    height: 75px;
                     background-repeat: no-repeat;
-                    background-position: center top;
-                    background-size: cover;
+                    margin: 20px;
+                    background-position: center;
+                    background-size: contain;
                     transition: 0.5s;
                     @media screen and (max-width: 650px) {
-                        width: 115px;
-                        height: 78px;
+                        width: 95px;
+                        height: 58px;
+                        margin: 10px;
                     }
                 }
                 &:nth-of-type(1) .image {
-                    background-image: url(../img/icons/29.png);
+                    background-image: url(../img/icons/pay_visa.png);
                 }
                 &:nth-of-type(2) .image {
-                    background-image: url(../img/icons/25.png);
+                    background-image: url(../img/icons/pay_quitung.png);
                 }
                 &:nth-of-type(3) .image {
-                    background-image: url(../img/icons/26.png);
+                    background-image: url(../img/icons/pay_privat.png);
                 }
             }
         }
@@ -2626,8 +2640,9 @@ footer {
     .bottom_info {
         margin: 30px 0 60px;
         .wr {
+
             max-width: 960px;
-            
+
             p {
                 font-size: 16px;
                 color: $m_grey;
@@ -2635,6 +2650,145 @@ footer {
                     color: $m_red;
                     margin-right: 30px;
                 }
+            }
+        }
+    }
+}
+
+.news_container {
+    .wr {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 10px 20px 20px;
+        justify-content: space-between;
+        .news_header {
+            flex-basis: 100%;
+            h2 {}
+            .underH2 {}
+        }
+        .news_list {
+            
+            flex-basis: 79%;
+            padding-right: 4vw;
+            color: $m_grey;
+            @media screen and (max-width: 840px) {
+                flex-basis: 100%;
+                padding-right: 0;
+            }
+            .item {
+                display: block;
+                border-bottom: 1px solid $m_grey;
+                padding: 20px 0;
+                &:last-child {
+                    border-bottom: 1px solid transparent;
+                }
+                &:hover .name {
+                    color: $m_red;
+                    text-decoration: none;
+                }
+                .data {
+                    color: $m_grey;
+                }
+                .name {
+                    color: $m_grey;
+                    text-decoration: underline;
+                    margin: 10px 0;
+                    font-weight: 500;
+                    transition: 0.3s;
+                }
+                .shortDescr {
+                    color: $m_grey;
+                }
+            }
+        }
+        .aside_menu {
+            flex-basis: 15%;
+            @media screen and (max-width: 840px) {
+                flex-basis: 100%;
+                order: -1;
+            }
+            .news_filter {
+                display: flex;
+                justify-content: flex-end;
+                font-size: 14px;
+                color: $m_grey;
+                @media screen and (max-width: 840px) {
+                    justify-content: flex-start;
+                    //                    flex-direction: column;
+                    
+                }
+
+                .item {
+
+                    display: flex;
+                    flex-direction: column;
+                    @media screen and (max-width: 840px) {
+                        flex-direction: row;
+                        flex-basis: 50%;
+                        flex-grow: 1;
+                        flex-wrap: wrap;
+                    }
+
+                    input {
+                        display: none;
+
+                        &:checked + label {
+                            color: $m_red;
+                            cursor: default;
+                            pointer-events: none;
+                            text-decoration: none;
+                            font-weight: 500;
+                        }
+                    }
+                    label {
+                        cursor: pointer;
+                        transition: 0.3s;
+                        font-weight: 400;
+                        text-decoration: underline;
+                        margin: 0 10px;
+                        &:hover {
+                            color: $m_red;
+                        }
+                        @media screen and (max-width: 840px) {
+                            flex-basis: 33%;
+                            flex-grow: 1;
+                            margin: 0;
+                        }
+
+                    }
+                }
+
+                .years {
+                    @media screen and (max-width: 560px) {
+                        flex-basis: 40%;
+                    }
+                    input {}
+                    label {
+                        @media screen and (max-width: 840px) {
+                            flex-basis: 20%;
+                            flex-grow: 1;
+                            margin: 0;
+                            margin-top: 5px;
+                        }
+                        @media screen and (max-width: 560px) {
+                        flex-basis: 33%;
+                    }
+
+                    }
+
+                }
+                .mounths {
+                    
+                    margin-left: 4vw;
+                    @media screen and (max-width: 560px) {
+                        flex-basis: 60%;
+//                        margin: 0;
+                    }
+                    input {}
+                    label {}
+
+                }
+
             }
         }
     }

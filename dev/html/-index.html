@@ -71,7 +71,7 @@
                     <span class="more">Узнать больше</span>
                 </a>
             </div>
-            <div class="item wow fadeInRight" >
+            <div class="item wow fadeInRight">
                 <div class="item_image"></div>
                 <a href="#" class="item_bottom">
                     <div class="name">Программа &laquo;11&raquo;</div>
@@ -95,27 +95,27 @@
                 </div>
                 <div class="flex_item wow zoomIn" data-wow-delay="0.5s">
                     <div class="image"></div>
-                    <div class="name">108,7 млн.грн</div>
+                    <div class="name"><span class="spincrement">108.7</span> млн.грн</div>
                     <div class="under_name">Активы<br/> компании</div>
                 </div>
                 <div class="flex_item wow zoomIn" data-wow-delay="0.4s">
                     <div class="image"></div>
-                    <div class="name">14,2 млн.грн</div>
+                    <div class="name"><span class="spincrement">14.2 </span>млн.грн</div>
                     <div class="under_name">Запас<br/> платежеспособности</div>
                 </div>
                 <div class="flex_item wow zoomIn" data-wow-delay="0s">
                     <div class="image"></div>
-                    <div class="name">12 лет</div>
+                    <div class="name"><span class="spincrement1">12</span> лет</div>
                     <div class="under_name">На рынке<br/> Украины</div>
                 </div>
                 <div class="flex_item wow zoomIn" data-wow-delay="0.2s">
                     <div class="image"></div>
-                    <div class="name">86,8 млн.грн</div>
+                    <div class="name"><span class="spincrement">868</span> млн.грн</div>
                     <div class="under_name">Резервы</div>
                 </div>
                 <div class="flex_item wow zoomIn" data-wow-delay="0.3s">
                     <div class="image"></div>
-                    <div class="name">13 000</div>
+                    <div class="name"><span class="spincrement1">13 000</span></div>
                     <div class="under_name">Количество<br/> клиентов</div>
                 </div>
             </div>
@@ -234,7 +234,7 @@
                         slidesToScroll: 3,
                     }
                 },
-                
+
                 {
                     breakpoint: 670,
                     settings: {
@@ -248,6 +248,45 @@
 
             ]
         });
+    });
+
+</script>
+<script>
+    $(document).ready(function() {
+        var show = true;
+        var countbox = ".flex_cont";
+        $(window).on("scroll load resize", function() {
+
+            if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+
+            var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+            var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+
+            var w_height = $(window).height(); // Высота окна браузера
+            var d_height = $(document).height(); // Высота всего документа
+
+            var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+
+            if (w_top + 300 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+                $(".spincrement").spincrement({
+                    decimalPoint: ".",
+                    duration: 3000,
+                    decimalPlaces: 1
+                });
+                $(".spincrement1").spincrement({
+                    decimalPoint: " ",
+                    duration: 3000
+                });
+
+                show = false;
+            }
+        });
+
+        //        $(".spincrement1").spincrement({
+        //            decimalPoint: " ",
+        //            duration: 3000
+        //        });
+
     });
 
 </script>
