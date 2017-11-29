@@ -10312,6 +10312,12 @@ a:focus
 .types_of_insurance .wr .cont_in .item:hover .name
 {
     font-weight: bold;
+
+    color: #202021;
+}
+.types_of_insurance .wr .cont_in .item:hover .item_bottom
+{
+    padding: 5px 0 0 0;
 }
 @media screen and (max-width: 900px)
 {
@@ -10383,7 +10389,7 @@ a:focus
             flex-direction: column;
 
     min-height: 70px;
-    padding: 15px 0 0;
+    padding: 20px 0 0;
 
     text-align: center;
     pointer-events: none; 
@@ -10437,7 +10443,7 @@ a:focus
 
     width: 80%;
     height: 0;
-    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 0;
 
     cursor: pointer; 
@@ -13945,6 +13951,28 @@ footer .wr .soc_links li:nth-child(3) a
     -ms-flex-pack: justify;
             justify-content: space-between;
 }
+.insur_contacts .form_questions .wr form .colll .input_wrap
+{
+    position: relative;
+}
+.insur_contacts .form_questions .wr form .colll label.error
+{
+    font-size: 14px;
+    font-weight: 300;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+    pointer-events: none; 
+
+    color: #f00;
+}
 .insur_contacts .form_questions .wr form .colll input,
 .insur_contacts .form_questions .wr form .colll textarea,
 .insur_contacts .form_questions .wr form .colll .btn_submit
@@ -14708,4 +14736,139 @@ footer .wr .soc_links li:nth-child(3) a
             transform: scaleX(1);
 
     opacity: 1;
+}
+
+.page404
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+
+    height: -webkit-calc(100vh - 121px);
+    height:    -moz-calc(100vh - 121px);
+    height:         calc(100vh - 121px);
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.page404 .wr
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    width: 100%;
+    max-width: 750px;
+    height: 440px; 
+
+    background-image: url(../img/404.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    -webkit-background-size: contain;
+         -o-background-size: contain;
+            background-size: contain;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+       -moz-box-pack: end;
+    -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+}
+@media screen and (max-width: 750px)
+{
+    .page404 .wr
+    {
+        height: 65vmax;
+    }
+}
+.page404 .wr .info
+{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 35px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #999;
+}
+@media screen and (max-width: 750px)
+{
+    .page404 .wr .info
+    {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 540px)
+{
+    .page404 .wr .info
+    {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 440px)
+{
+    .page404 .wr .info
+    {
+        font-size: 16px;
+    }
+}
+.page404 .wr .goToIndex
+{
+    font-weight: 500;
+
+    display: block;
+
+    margin: 30px 20px 0;
+    padding: 15px 20px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    border: 1px solid transparent; 
+    background-color: #f00;
+}
+@media screen and (max-width: 540px)
+{
+    .page404 .wr .goToIndex
+    {
+        margin: 15px 0;
+    }
+}
+@media screen and (max-width: 440px)
+{
+    .page404 .wr .goToIndex
+    {
+        font-size: 16px;
+    }
+}
+.page404 .wr .goToIndex:hover
+{
+    color: #f00;
+    border: 1px solid #f00; 
+    background-color: #fff;
 }

@@ -3,8 +3,11 @@ $(document).ready(function () {
     $('.tooltip').tooltipster({
         theme: ['tooltipster-noir', 'tooltipster-noir-customized']
     });
-    
-    
+
+    $('.phone_contacts').mask('+38 - (000) 000-00-00');
+    $('.date_calculator').mask('00.00.0000');
+    $('.period_calculator').mask('от 0 - 00 лет');
+
     new WOW().init();
 
     //    $("header").headroom();
@@ -14,7 +17,10 @@ $(document).ready(function () {
     // construct an instance of Headroom, passing the element
     var headroom = new Headroom(myElement, {
         "offset": 120,
-        "tolerance": { up : 20, down : 10 },
+        "tolerance": {
+            up: 20,
+            down: 10
+        },
         "classes": {
             "initial": "animated",
             "pinned": "slideDown",
@@ -23,6 +29,42 @@ $(document).ready(function () {
     });
     // initialise
     headroom.init();
+
+    
+    //Form VAlidation 
+
+    $("#contacts_form").validate({
+        rules: {
+            form_name: {
+                required: true,
+                minlenhth: 3,
+            },
+            form_email: {
+                required: true,
+                email: true
+            },
+            form_phone: {
+                required: true,
+                minlenhth: 10,
+                digits: true
+            }
+        },
+        messages: {
+            form_name: {
+                required: "Обязательное поле",
+                minlenhth: "Длина имени не менее 3-х символов"
+            },
+            form_email: {
+                required: "Обязательное поле",
+                email: "Введите корректный Email"
+            },
+            form_phone: {
+                required: "Обязательное поле"
+            }
+        },
+        focusCleanup: true,
+        focusInvalid: false
+    });
 
 
     $('[data-toggle="tooltip"]').tooltip();

@@ -515,15 +515,20 @@ a:focus {
                     border: 1px solid $m_red !important;
                     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
                     margin-bottom: 15px;
+
                 }
                 &:hover .name {
                     font-weight: bold;
+                    color: $m_black;
                 }
-                &:hover .item_bottom {}
+                &:hover .item_bottom {
+                    padding: 5px 0 0 0;
+                }
                 @media screen and (max-width: 900px) {
                     flex-basis: calc(50% - 20px);
                     margin: 0px 10px;
                     border: 1px solid $m_grey;
+
                     margin-bottom: 20px;
                     &:hover {
                         transform: scale(1);
@@ -563,7 +568,7 @@ a:focus {
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    padding: 15px 0 0px;
+                    padding: 20px 0 0px;
                     background-color: #fff;
                     pointer-events: none;
                     @media screen and (max-width: 900px) {
@@ -591,9 +596,10 @@ a:focus {
                         background-color: $m_red;
                         color: #fff;
                         padding: 0px;
+                        margin-bottom: 10px;
                         display: block;
                         width: 80%;
-                        margin-top: 10px;
+                        //                        margin-top: 10px;
                         transform: scale(0);
                         border: 1px solid transparent;
                         cursor: pointer;
@@ -2476,6 +2482,19 @@ footer {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    .input_wrap {
+                        position: relative;
+                    }
+                    label.error {
+                        color: $m_red;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 14px;
+                        font-weight: 300;
+                        pointer-events: none;
+                    }
                     input,
                     textarea,
                     .btn_submit {
@@ -2875,5 +2894,68 @@ footer {
             transform: scaleX(1);
             opacity: 1;
         }
+    }
+}
+
+.page404 {
+    height: calc(100vh - 121px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wr {
+        width: 100%;
+        max-width: 750px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-image: url(../img/404.jpg);
+        background-position: center top;
+        background-size: contain;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        height: 440px;
+        @media screen and (max-width: 750px) {
+            height: 65vmax;
+        }
+        .info {
+            text-align: center;
+            font-size: 24px;
+            line-height: 35px;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: $m_grey;
+            @media screen and (max-width: 750px) {
+                font-size: 20px;
+            }
+            @media screen and (max-width: 540px) {
+                font-size: 18px;
+            }
+            @media screen and (max-width: 440px) {
+                font-size: 16px;
+            }
+        }
+        .goToIndex {
+            margin: 30px 20px 0;
+            padding: 15px 20px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+            background-color: $m_red;
+            display: block;
+            border: 1px solid transparent;
+            @media screen and (max-width: 540px) {
+                margin: 15px 0;
+            }
+            @media screen and (max-width: 440px) {
+                font-size: 16px;
+            }
+            &:hover {
+                background-color: #fff;
+                color: $m_red;
+                border: 1px solid $m_red;
+
+            }
+        }
+
     }
 }
