@@ -147,7 +147,7 @@ $(document).ready(function () {
 
 
     // init position: sticky; polifill
-    $('.sticky').Stickyfill();
+//    $('.sticky').Stickyfill();
 
     // init object-fit polifill
     objectFitImages();
