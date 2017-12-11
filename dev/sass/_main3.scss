@@ -97,7 +97,7 @@ a:focus {
         }
     }
     .wr {
-        padding: 1px;
+        padding: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -112,11 +112,9 @@ a:focus {
             }
             img {
                 width: 100%;
-                min-width: 145px;
                 height: auto;
                 @media screen and (max-width: 580px) {
-                    min-width: 105px;
-                    width: 105px;
+                    max-width: 105px;
                 }
             }
         }
@@ -497,8 +495,7 @@ a:focus {
                 border-top: 1px solid $m_grey;
                 border-bottom: 1px solid $m_grey;
                 border-left: 1px solid $m_grey; //                border-right: 1px solid transparent;
-                flex-basis: 24%;
-                width: 24%;
+                flex-basis: 25%;
                 position: relative;
                 transition: 0.3s;
                 position: relative;
@@ -528,8 +525,7 @@ a:focus {
                     padding: 5px 0 0 0;
                 }
                 @media screen and (max-width: 900px) {
-                    flex-basis: calc(49% - 20px);
-                    width: calc(49% - 20px);
+                    flex-basis: calc(50% - 20px);
                     margin: 0px 10px;
                     border: 1px solid $m_grey;
 
@@ -602,7 +598,8 @@ a:focus {
                         padding: 0px;
                         margin-bottom: 10px;
                         display: block;
-                        width: 80%; //                        margin-top: 10px;
+                        width: 80%;
+                        //                        margin-top: 10px;
                         transform: scale(0);
                         border: 1px solid transparent;
                         cursor: pointer;
@@ -2960,42 +2957,5 @@ footer {
             }
         }
 
-    }
-}
-
-.mm-listview > li > a:hover {
-    color: $m_red;
-}
-
-.mm-menu .mm-listview > li .mm-next:after {
-    transition: 0.3s;
-}
-
-.mm-menu .mm-listview > li .mm-next:hover:after {
-    border-color: $m_red;
-}
-
-.mm-navbars-bottom .mm-navbar > a:hover {
-    color: $m_red;
-}
-
-
-/// add styles 
-.types_of_insurance {
-    .wr {
-
-        .underH2 {}
-        .cont_in {
-
-            .item {
-                pointer-events: none;
-                @media screen and (max-width: 900px) {
-                    pointer-events: auto;
-                }
-                .item_bottom {
-                    pointer-events: auto;
-                }    
-            }
-        }
     }
 }
